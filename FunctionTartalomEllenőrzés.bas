@@ -3,9 +3,7 @@ Option Explicit
 
 Sub TartalomEllenõrzés()
 
-If AppWindow.TextBox11 = "" Then
-MsgBox "Bárcaszám hiányzik!"
-ElseIf AppWindow.TextBox1 = "" Then
+If AppWindow.TextBox1 = "" Then
 MsgBox "Munkaszám hiányzik!"
 ElseIf AppWindow.TextBox10 = "" Then
 MsgBox "RÁBAszám hiányzik!"

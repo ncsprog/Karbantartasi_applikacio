@@ -3,9 +3,7 @@ Option Explicit
 
 Sub TartalomEllenõrzés2()
 
-If AppWindow.TextBox54 = "" Then
-MsgBox "Bárcaszám hiányzik!"
-ElseIf AppWindow.TextBox49 = "" Then
+If AppWindow.TextBox49 = "" Then
 MsgBox "Záró idõpont (-ig) hiányzik!"
 ElseIf AppWindow.TextBox57 = "" Then
 MsgBox "Megoldás leírása hiányzik!"

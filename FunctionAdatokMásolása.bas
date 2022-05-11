@@ -3,13 +3,14 @@ Option Explicit
 
 Sub AdatokMásolása()
 
+
 ' - Bárcaszám   "B:B" - '
 
 Sheets("adatok").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Brw As Long
-Brw = ActiveCell.Row + 1
+Brw = ActiveCell.row + 1
 Dim Boszlop As String
 Boszlop = "b"
 Dim Bkoord As String
@@ -22,7 +23,7 @@ Sheets("adatok").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim Crw As Long
-Crw = ActiveCell.Row + 1
+Crw = ActiveCell.row + 1
 Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
@@ -35,7 +36,7 @@ Sheets("adatok").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim Drw As Long
-Drw = ActiveCell.Row + 1
+Drw = ActiveCell.row + 1
 Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
@@ -48,7 +49,7 @@ Sheets("adatok").Select
 Columns("e:e").Select
 Selection.End(xlDown).Select
 Dim Erw As Long
-Erw = ActiveCell.Row + 1
+Erw = ActiveCell.row + 1
 Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
@@ -61,7 +62,7 @@ Sheets("adatok").Select
 Columns("f:f").Select
 Selection.End(xlDown).Select
 Dim Frw As Long
-Frw = ActiveCell.Row + 1
+Frw = ActiveCell.row + 1
 Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
@@ -74,7 +75,7 @@ Sheets("adatok").Select
 Columns("g:g").Select
 Selection.End(xlDown).Select
 Dim Grw As Long
-Grw = ActiveCell.Row + 1
+Grw = ActiveCell.row + 1
 Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
@@ -87,7 +88,7 @@ Sheets("adatok").Select
 Columns("h:h").Select
 Selection.End(xlDown).Select
 Dim Hrw As Long
-Hrw = ActiveCell.Row + 1
+Hrw = ActiveCell.row + 1
 Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
@@ -100,7 +101,7 @@ Sheets("adatok").Select
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim Irw As Long
-Irw = ActiveCell.Row + 1
+Irw = ActiveCell.row + 1
 Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
@@ -113,7 +114,7 @@ Sheets("adatok").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Jrw As Long
-Jrw = ActiveCell.Row + 1
+Jrw = ActiveCell.row + 1
 Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
@@ -126,7 +127,7 @@ Sheets("adatok").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Krw As Long
-Krw = ActiveCell.Row + 1
+Krw = ActiveCell.row + 1
 Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String
@@ -139,7 +140,7 @@ Sheets("adatok").Select
 Columns("l:l").Select
 Selection.End(xlDown).Select
 Dim Lrw As Long
-Lrw = ActiveCell.Row + 1
+Lrw = ActiveCell.row + 1
 Dim Loszlop As String
 Loszlop = "l"
 Dim Lkoord As String
@@ -152,7 +153,7 @@ Sheets("adatok").Select
 Columns("m:m").Select
 Selection.End(xlDown).Select
 Dim Mrw As Long
-Mrw = ActiveCell.Row + 1
+Mrw = ActiveCell.row + 1
 Dim Moszlop As String
 Moszlop = "m"
 Dim Mkoord As String
@@ -165,7 +166,7 @@ Sheets("adatok").Select
 Columns("n:n").Select
 Selection.End(xlDown).Select
 Dim Nrw As Long
-Nrw = ActiveCell.Row + 1
+Nrw = ActiveCell.row + 1
 Dim Noszlop As String
 Noszlop = "n"
 Dim Nkoord As String
@@ -178,7 +179,7 @@ Sheets("adatok").Select
 Columns("o:o").Select
 Selection.End(xlDown).Select
 Dim Orw As Long
-Orw = ActiveCell.Row + 1
+Orw = ActiveCell.row + 1
 Dim Ooszlop As String
 Ooszlop = "o"
 Dim Okoord As String
@@ -191,7 +192,7 @@ Sheets("adatok").Select
 Columns("p:p").Select
 Selection.End(xlDown).Select
 Dim Prw As Long
-Prw = ActiveCell.Row + 1
+Prw = ActiveCell.row + 1
 Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
@@ -204,7 +205,7 @@ Sheets("adatok").Select
 Columns("q:q").Select
 Selection.End(xlDown).Select
 Dim Qrw As Long
-Qrw = ActiveCell.Row + 1
+Qrw = ActiveCell.row + 1
 Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
@@ -217,7 +218,7 @@ Sheets("adatok").Select
 Columns("r:r").Select
 Selection.End(xlDown).Select
 Dim Rrw As Long
-Rrw = ActiveCell.Row + 1
+Rrw = ActiveCell.row + 1
 Dim Roszlop As String
 Roszlop = "r"
 Dim Rkoord As String
@@ -230,7 +231,7 @@ Sheets("adatok").Select
 Columns("s:s").Select
 Selection.End(xlDown).Select
 Dim Srw As Long
-Srw = ActiveCell.Row + 1
+Srw = ActiveCell.row + 1
 Dim Soszlop As String
 Soszlop = "s"
 Dim Skoord As String
@@ -243,7 +244,7 @@ Sheets("adatok").Select
 Columns("t:t").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
-Trw = ActiveCell.Row + 1
+Trw = ActiveCell.row + 1
 Dim Toszlop As String
 Toszlop = "t"
 Dim Tkoord As String
@@ -256,11 +257,12 @@ Sheets("adatok").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Urw As Long
-Urw = ActiveCell.Row + 1
+Urw = ActiveCell.row + 1
 Dim Uoszlop As String
 Uoszlop = "u"
 Dim Ukoord As String
 Ukoord = Uoszlop & Urw
 Range(Ukoord).Value = "vatta"
+
 
 End Sub

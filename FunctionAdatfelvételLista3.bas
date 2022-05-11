@@ -1,17 +1,17 @@
-Attribute VB_Name = "FunctionAdatfelvételLista"
+Attribute VB_Name = "FunctionAdatfelvételLista3"
 Option Explicit
 
-Sub AdatfelvételLista()
+Sub AdatfelvételLista3()
 
 ' - Lista koordináta - '
 
 Sheets("adatok").Select
-Columns("q:q").Select
+Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
 ALrw = ActiveCell.row
 Dim ALoszlop As String
-ALoszlop = "q"
+ALoszlop = "u"
 Dim ALkoord As String
 ALkoord = ALoszlop & ALrw
 
@@ -19,8 +19,7 @@ ALkoord = ALoszlop & ALrw
 
 Dim rngList As Range
 Set rngList = Munka1.Range("a1", ALkoord)
-AppWindow.ListBox7.List = rngList.Value
+AppWindow.ListBox22.List = rngList.Value
 
 
 End Sub
-
