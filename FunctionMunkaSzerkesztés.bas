@@ -88,7 +88,7 @@ Dim Jclm As String
 Jclm = "j"
 Dim Jkoord As String
 Jkoord = Jclm & rownr
-AppWindow.TextBox70 = Munka1.Range(Jkoord).Value
+AppWindow.TextBox74 = Munka1.Range(Jkoord).Value
 
 ' - -ig - K'
 
@@ -128,7 +128,7 @@ Dim Pclm As String
 Pclm = "p"
 Dim Pkoord As String
 Pkoord = Pclm & rownr
-AppWindow.TextBox56 = Munka1.Range(Pkoord).Value
+AppWindow.ComboBox5 = Munka1.Range(Pkoord).Value
 
 ' - Mérés - Q'
 
@@ -136,7 +136,7 @@ Dim Qclm As String
 Qclm = "q"
 Dim Qkoord As String
 Qkoord = Qclm & rownr
-AppWindow.TextBox55 = Munka1.Range(Qkoord).Value
+AppWindow.ComboBox6 = Munka1.Range(Qkoord).Value
 
 ' - Felelõs - R'
 
@@ -144,7 +144,7 @@ Dim Rclm As String
 Rclm = "r"
 Dim Rkoord As String
 Rkoord = Rclm & rownr
-AppWindow.TextBox58 = Munka1.Range(Rkoord).Value
+AppWindow.ComboBox7 = Munka1.Range(Rkoord).Value
 
 ' - Becsült visszaadás - S'
 

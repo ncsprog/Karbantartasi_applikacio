@@ -12,18 +12,18 @@ AppWindow.TextBox66 = ""
 AppWindow.TextBox67 = ""
 AppWindow.TextBox68 = ""
 AppWindow.TextBox69 = ""
-AppWindow.TextBox70 = ""
+AppWindow.TextBox74 = ""
 AppWindow.TextBox71 = ""
 AppWindow.TextBox72 = ""
 AppWindow.TextBox49 = ""
 AppWindow.TextBox57 = ""
-AppWindow.TextBox58 = ""
+AppWindow.ComboBox5 = ""
 AppWindow.TextBox59 = ""
-AppWindow.TextBox55 = ""
+AppWindow.ComboBox6 = ""
 AppWindow.TextBox60 = ""
 AppWindow.TextBox61 = ""
-AppWindow.TextBox56 = ""
-
+AppWindow.ComboBox7 = ""
+AppWindow.TextBox79 = ""
 
 End Sub
 

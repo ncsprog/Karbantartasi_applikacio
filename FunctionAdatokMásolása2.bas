@@ -129,7 +129,7 @@ Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
 Jkoord = Joszlop & Jrw
-Range(Jkoord).Value = AppWindow.TextBox70
+Range(Jkoord).Value = AppWindow.TextBox74
 
 ' - -ig "K:K" - '
 
@@ -146,16 +146,15 @@ Range(Kkoord).Value = AppWindow.TextBox49
 
 ' - Idõ "L:L" - '
 
-Sheets("adatok").Select
-Columns("l:l").Select
-Selection.End(xlDown).Select
-Dim Lrw As Long
-Lrw = ActiveCell.row + 1
-Dim Loszlop As String
-Loszlop = "l"
-Dim Lkoord As String
-Lkoord = Loszlop & Lrw
-Range(Lkoord).Value = AppWindow.TextBox71
+'Sheets("adatok").Select
+'Columns("l:l").Select
+'Dim Lrw As Long
+'Lrw = ActiveCell.row + 1
+'Dim Loszlop As String
+'Loszlop = "l"
+'Dim Lkoord As String
+'Lkoord = Loszlop & Lrw
+'Range(Lkoord).Value = AppWindow.TextBox71
 
 ' - Probléma "N:N" - '
 
@@ -194,7 +193,7 @@ Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
 Pkoord = Poszlop & Prw
-Range(Pkoord).Value = AppWindow.TextBox56
+Range(Pkoord).Value = AppWindow.ComboBox5
 
 ' - Mérés   "Q:Q" - '
 
@@ -207,7 +206,7 @@ Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
 Qkoord = Qoszlop & Qrw
-Range(Qkoord).Value = AppWindow.TextBox55
+Range(Qkoord).Value = AppWindow.ComboBox6
 
 ' - Felelõs   "R:R" - '
 
@@ -220,7 +219,7 @@ Dim Roszlop As String
 Roszlop = "r"
 Dim Rkoord As String
 Rkoord = Roszlop & Rrw
-Range(Rkoord).Value = AppWindow.TextBox58
+Range(Rkoord).Value = AppWindow.ComboBox7
 
 ' - Becsültdátum   "S:S" - '
 
@@ -260,6 +259,23 @@ Uoszlop = "u"
 Dim Ukoord As String
 Ukoord = Uoszlop & Urw
 Range(Ukoord).Value = AppWindow.TextBox61
+
+' - Megjegyzés   "V:V" - '
+
+Sheets("adatok").Select
+Columns("v:v").Select
+Selection.End(xlDown).Select
+Dim Vrw As Long
+Vrw = ActiveCell.row + 1
+Dim Voszlop As String
+Voszlop = "v"
+Dim Vkoord As String
+Vkoord = Voszlop & Vrw
+If AppWindow.TextBox79 = "" Then
+Range(Vkoord).Value = " n/a "
+Else
+Range(Vkoord).Value = AppWindow.TextBox79
+End If
 
 End Sub
 

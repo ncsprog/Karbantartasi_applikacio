@@ -4,7 +4,8 @@ Option Explicit
 Sub GépTörténet()
 
 Sheets("transfer").Select
-Columns("a:u").Clear
+Columns("a:u").Select
+Selection = ""
 
 Dim kritérium As String
 kritérium = AppWindow.TextBox73.Value

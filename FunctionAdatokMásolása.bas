@@ -30,6 +30,7 @@ Dim Ckoord As String
 Ckoord = Coszlop & Crw
 Range(Ckoord).Value = Date
 
+
 ' - Munkaszám   "D:D" - '
 
 Sheets("adatok").Select
@@ -93,7 +94,7 @@ Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
 Hkoord = Hoszlop & Hrw
-Range(Hkoord).Value = AppWindow.TextBox9
+Range(Hkoord).Value = AppWindow.ComboBox1
 
 ' - Csapat   "I:I" - '
 
@@ -106,7 +107,7 @@ Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
 Ikoord = Ioszlop & Irw
-Range(Ikoord).Value = AppWindow.TextBox8
+Range(Ikoord).Value = AppWindow.ComboBox2
 
 ' - -tól   "J:J" - '
 
@@ -136,16 +137,16 @@ Range(Kkoord).Value = AppWindow.TextBox6
 
 ' - Idõ "L:L" - '
 
-Sheets("adatok").Select
-Columns("l:l").Select
-Selection.End(xlDown).Select
-Dim Lrw As Long
-Lrw = ActiveCell.row + 1
-Dim Loszlop As String
-Loszlop = "l"
-Dim Lkoord As String
-Lkoord = Loszlop & Lrw
-Range(Lkoord).Value = "IDÕ"
+'Sheets("adatok").Select
+'Columns("l:l").Select
+'Selection.End(xlDown).Select
+'Dim Lrw As Long
+'Lrw = ActiveCell.row + 1
+'Dim Loszlop As String
+'Loszlop = "l"
+'Dim Lkoord As String
+'Lkoord = Loszlop & Lrw
+'Range(Lkoord).Value = idõ
 
 ' - Mûszak   "M:M" - '
 
@@ -197,7 +198,7 @@ Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
 Pkoord = Poszlop & Prw
-Range(Pkoord).Value = AppWindow.TextBox3
+Range(Pkoord).Value = AppWindow.ComboBox4
 
 ' - Mérés   "Q:Q" - '
 
@@ -210,7 +211,7 @@ Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
 Qkoord = Qoszlop & Qrw
-Range(Qkoord).Value = AppWindow.TextBox2
+Range(Qkoord).Value = AppWindow.ComboBox3
 
 ' - Felelõs   "R:R" - '
 
@@ -264,5 +265,21 @@ Dim Ukoord As String
 Ukoord = Uoszlop & Urw
 Range(Ukoord).Value = "vatta"
 
+' - Megjegyzés   "V:V" - '
 
+Sheets("adatok").Select
+Columns("v:v").Select
+Selection.End(xlDown).Select
+Dim Vrw As Long
+Vrw = ActiveCell.row + 1
+Dim Voszlop As String
+Voszlop = "v"
+Dim Vkoord As String
+Vkoord = Voszlop & Vrw
+If AppWindow.TextBox78 = "" Then
+Range(Vkoord).Value = " n/a "
+Else
+Range(Vkoord).Value = AppWindow.TextBox78
+End If
+    
 End Sub
