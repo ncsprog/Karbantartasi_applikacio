@@ -3,7 +3,7 @@ Option Explicit
 
 Sub GépTörténet()
 
-Sheets("transfer").Select
+Sheets("szûrõ_transfer").Select
 Columns("a:u").Select
 Selection = ""
 
@@ -33,7 +33,7 @@ Sheets("adatok").Select
 ActiveSheet.AutoFilterMode = False              'törli a szûrõt
 Application.CutCopyMode = False                 'a másolás kijelölélst törli
 
-Sheets("transfer").Select
+Sheets("szûrõ_transfer").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
@@ -51,5 +51,6 @@ AppWindow.ListBox22.List = rngList.Value
 Sheets("adatok").Select
 Range("a1").Select
 
-
+Sheets("Start").Select
+Range("b2").Select
 End Sub

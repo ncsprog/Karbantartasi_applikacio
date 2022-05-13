@@ -3,11 +3,11 @@ Option Explicit
 
 Sub AdatfelvételLista2()
 
-Sheets("transfer").Select
-Columns("a:u").Select
+Sheets("szûrõ_transfer").Select
+Columns("a:v").Select
 Selection = ""
 
-Munka1.Range("a1").AutoFilter 16, "Folyamatban"
+Munka1.Range("a1").AutoFilter 16, AppWindow.ComboBox5.Value
 
 ' - Lista koordináta - '
 
@@ -30,7 +30,7 @@ Sheets("adatok").Select
 ActiveSheet.AutoFilterMode = False              'törli a szûrõt
 Application.CutCopyMode = False                 'a másolás kijelölélst törli
 
-Sheets("transfer").Select
+Sheets("szûrõ_transfer").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
@@ -48,5 +48,6 @@ AppWindow.ListBox20.List = rngList.Value
 Sheets("adatok").Select
 Range("a1").Select
 
-
+Sheets("Start").Select
+Range("b2").Select
 End Sub

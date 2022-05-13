@@ -15,7 +15,7 @@ Dim Boszlop As String
 Boszlop = "b"
 Dim Bkoord As String
 Bkoord = Boszlop & Brw
-Range(Bkoord).Value = AppWindow.TextBox11
+Range(Bkoord).Value = AppWindow.TextBox11.Value
 
 ' - Dátum   "C:C" - '
 
@@ -42,7 +42,7 @@ Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
 Dkoord = Doszlop & Drw
-Range(Dkoord).Value = AppWindow.TextBox1
+Range(Dkoord).Value = AppWindow.TextBox1.Value
 
 ' - RÁBAszám   "E:E" - '
 
@@ -55,7 +55,7 @@ Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
 Ekoord = Eoszlop & Erw
-Range(Ekoord).Value = AppWindow.TextBox10
+Range(Ekoord).Value = AppWindow.TextBox10.Value
 
  '- Gép   "F:F" - '
 
@@ -94,7 +94,7 @@ Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
 Hkoord = Hoszlop & Hrw
-Range(Hkoord).Value = AppWindow.ComboBox1
+Range(Hkoord).Value = AppWindow.ComboBox1.Value
 
 ' - Csapat   "I:I" - '
 
@@ -107,7 +107,7 @@ Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
 Ikoord = Ioszlop & Irw
-Range(Ikoord).Value = AppWindow.ComboBox2
+Range(Ikoord).Value = AppWindow.ComboBox2.Value
 
 ' - -tól   "J:J" - '
 
@@ -120,7 +120,7 @@ Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
 Jkoord = Joszlop & Jrw
-Range(Jkoord).Value = AppWindow.TextBox7
+Range(Jkoord).Value = AppWindow.TextBox7.Value
 
 ' - -ig "K:K" - '
 
@@ -133,7 +133,7 @@ Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String
 Kkoord = Koszlop & Krw
-Range(Kkoord).Value = AppWindow.TextBox6
+Range(Kkoord).Value = AppWindow.TextBox6.Value
 
 ' - Idõ "L:L" - '
 
@@ -172,7 +172,7 @@ Dim Noszlop As String
 Noszlop = "n"
 Dim Nkoord As String
 Nkoord = Noszlop & Nrw
-Range(Nkoord).Value = AppWindow.TextBox5
+Range(Nkoord).Value = AppWindow.TextBox5.Value
 
 ' - Megoldás   "O:O" - '
 
@@ -185,7 +185,7 @@ Dim Ooszlop As String
 Ooszlop = "o"
 Dim Okoord As String
 Okoord = Ooszlop & Orw
-Range(Okoord).Value = AppWindow.TextBox4
+Range(Okoord).Value = AppWindow.TextBox4.Value
 
 ' - Státusz   "P:P" - '
 
@@ -198,7 +198,7 @@ Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
 Pkoord = Poszlop & Prw
-Range(Pkoord).Value = AppWindow.ComboBox4
+Range(Pkoord).Value = AppWindow.ComboBox4.Value
 
 ' - Mérés   "Q:Q" - '
 
@@ -211,7 +211,7 @@ Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
 Qkoord = Qoszlop & Qrw
-Range(Qkoord).Value = AppWindow.ComboBox3
+Range(Qkoord).Value = AppWindow.ComboBox3.Value
 
 ' - Felelõs   "R:R" - '
 
@@ -279,7 +279,10 @@ Vkoord = Voszlop & Vrw
 If AppWindow.TextBox78 = "" Then
 Range(Vkoord).Value = " n/a "
 Else
-Range(Vkoord).Value = AppWindow.TextBox78
+Range(Vkoord).Value = AppWindow.TextBox78.Value
 End If
     
+    
+Sheets("Start").Select
+Range("b2").Select
 End Sub

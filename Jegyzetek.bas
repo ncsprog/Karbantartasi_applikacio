@@ -9,4 +9,7 @@ Option Explicit
 
 'minden, nem publikus fület rejtsen, jelszavazzon a kód oda-vissza
 
+'IDgenerálás3 - megbeszéléshez
+'ID_generálás3 - megbeszéléshez
+'AdatokMásolása3 - megbeszéléshez
 

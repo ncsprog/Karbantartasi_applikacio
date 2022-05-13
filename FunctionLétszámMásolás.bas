@@ -3,7 +3,7 @@ Option Explicit
 
 Sub LétszámMásolás()
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Dátumellenõrzés As Date
@@ -14,7 +14,7 @@ If Date <> Dátumellenõrzés Then
 IDgenerálás2
 ID_generálás2
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Brw As Long
@@ -29,7 +29,7 @@ Range(Bkoord).Value = Date
 
 ' - Team I. "C:C" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim Crw As Long
@@ -49,7 +49,7 @@ End If
 
 ' - Team II. "D:D" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim Drw As Long
@@ -67,7 +67,7 @@ End If
 
 ' - Team III. "E:E" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("e:e").Select
 Selection.End(xlDown).Select
 Dim Erw As Long
@@ -87,7 +87,7 @@ End If
 
 ' - Team I. "F:F" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("f:f").Select
 Selection.End(xlDown).Select
 Dim Frw As Long
@@ -105,7 +105,7 @@ End If
 
 ' - Team II. "G:G" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("g:g").Select
 Selection.End(xlDown).Select
 Dim Grw As Long
@@ -123,7 +123,7 @@ End If
 
 ' - Team III. "H:H" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("h:h").Select
 Selection.End(xlDown).Select
 Dim Hrw As Long
@@ -144,7 +144,7 @@ End If
 
 ' - Team I. "I:I" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim Irw As Long
@@ -162,7 +162,7 @@ End If
 
 ' - Team II. "J:J" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Jrw As Long
@@ -181,7 +181,7 @@ End If
 
 ' - Team III. "K:K" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Krw As Long
@@ -201,7 +201,7 @@ End If
 
 ' - Team I. "L:L" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("l:l").Select
 Selection.End(xlDown).Select
 Dim Lrw As Long
@@ -219,7 +219,7 @@ End If
 
 ' - Team II. "M:M" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("m:m").Select
 Selection.End(xlDown).Select
 Dim Mrw As Long
@@ -237,7 +237,7 @@ End If
 
 ' - Team III. "N:N" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("n:n").Select
 Selection.End(xlDown).Select
 Dim Nrw As Long
@@ -257,7 +257,7 @@ End If
 
 ' - Team I. "O:O" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("o:o").Select
 Selection.End(xlDown).Select
 Dim Orw As Long
@@ -275,7 +275,7 @@ End If
 
 ' - Team II. "P:P" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("p:p").Select
 Selection.End(xlDown).Select
 Dim Prw As Long
@@ -293,7 +293,7 @@ End If
 
 ' - Team III. "Q:Q" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("q:q").Select
 Selection.End(xlDown).Select
 Dim Qrw As Long
@@ -314,7 +314,7 @@ End If
 
 ' - Team I. "R:R" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("r:r").Select
 Selection.End(xlDown).Select
 Dim Rrw As Long
@@ -332,7 +332,7 @@ End If
 
 ' - Team II. "S:S" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("s:s").Select
 Selection.End(xlDown).Select
 Dim Srw As Long
@@ -350,7 +350,7 @@ End If
 
 ' - Team III. "T:T" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("t:t").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
@@ -370,7 +370,7 @@ End If
 
 ' - Team I. "U:U" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Urw As Long
@@ -388,7 +388,7 @@ End If
 
 ' - Team II. "V:V" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("v:v").Select
 Selection.End(xlDown).Select
 Dim Vrw As Long
@@ -406,7 +406,7 @@ End If
 
 ' - Team III. "W:W" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("w:w").Select
 Selection.End(xlDown).Select
 Dim Wrw As Long
@@ -426,7 +426,7 @@ End If
 
 ' - Team I. "X:X" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("x:x").Select
 Selection.End(xlDown).Select
 Dim Xrw As Long
@@ -444,7 +444,7 @@ End If
 
 ' - Team II. "Y:Y" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("y:y").Select
 Selection.End(xlDown).Select
 Dim Yrw As Long
@@ -462,7 +462,7 @@ End If
 
 ' - Team III. "Z:Z" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("z:z").Select
 Selection.End(xlDown).Select
 Dim Zrw As Long
@@ -483,7 +483,7 @@ End If
 
 ' - Team I. "AA:AA" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("aa:aa").Select
 Selection.End(xlDown).Select
 Dim AArw As Long
@@ -501,7 +501,7 @@ End If
 
 ' - Team II. "AB:AB" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("ab:ab").Select
 Selection.End(xlDown).Select
 Dim ABrw As Long
@@ -519,7 +519,7 @@ End If
 
 ' - Team III. "AC:AC" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("ac:ac").Select
 Selection.End(xlDown).Select
 Dim ACrw As Long
@@ -539,7 +539,7 @@ End If
 
 ' - Mérnök "AD:AD" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("ad:ad").Select
 Selection.End(xlDown).Select
 Dim ADrw As Long
@@ -557,7 +557,7 @@ End If
 
 ' - Team II. "AE:AE" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("ae:ae").Select
 Selection.End(xlDown).Select
 Dim AErw As Long
@@ -575,7 +575,7 @@ End If
 
 ' - Team III. "AF:AF" - '
 
-Sheets("Létszám").Select
+Sheets("létszám").Select
 Columns("af:af").Select
 Selection.End(xlDown).Select
 Dim AFrw As Long
@@ -596,4 +596,6 @@ Else
 Exit Sub
 End If
 
+Sheets("Start").Select
+Range("b2").Select
 End Sub

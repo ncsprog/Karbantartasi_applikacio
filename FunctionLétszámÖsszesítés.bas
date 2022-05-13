@@ -23,4 +23,7 @@ Dim létszám As Integer
 létszám = Application.WorksheetFunction.Sum(Range(kezd, vég))
 AppWindow.TextBox80.Value = létszám
 
+
+Sheets("Start").Select
+Range("b2").Select
 End Sub

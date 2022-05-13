@@ -25,5 +25,8 @@ AppWindow.TextBox61 = ""
 AppWindow.ComboBox7 = ""
 AppWindow.TextBox79 = ""
 
+
+Sheets("Start").Select
+Range("b2").Select
 End Sub
 

@@ -1,9 +1,9 @@
-Attribute VB_Name = "FunctionIDgenerálás"
+Attribute VB_Name = "FunctionIDgenerálás3"
 Option Explicit
 
-Sub IDgenerálás()
+Sub IDgenerálás3()
 
-Sheets("adatok").Select
+Sheets("Megbeszélés").Select
 Columns("a:a").Select
 Selection.End(xlDown).Select
 Dim IDnr As Long

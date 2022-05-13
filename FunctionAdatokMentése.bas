@@ -6,5 +6,6 @@ Sub AdatokMentése()
 ActiveWorkbook.Save
 MsgBox "Másolás, mentés kész!"
 
-
+Sheets("Start").Select
+Range("b2").Select
 End Sub

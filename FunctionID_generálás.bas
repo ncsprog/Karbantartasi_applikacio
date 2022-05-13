@@ -19,4 +19,7 @@ Dim ID_koord As String
 ID_koord = ID_oszlop & ID_rw
 Range(ID_koord) = most
 
+
+Sheets("Start").Select
+Range("b2").Select
 End Sub

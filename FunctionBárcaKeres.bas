@@ -21,4 +21,6 @@ Dim rngList As Range
 Set rngList = Munka3.Range("a1", ALkoord)
 AppWindow.ListBox21.List = rngList.Value
 
+Sheets("Start").Select
+Range("b2").Select
 End Sub

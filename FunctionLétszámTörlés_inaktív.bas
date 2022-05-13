@@ -46,4 +46,7 @@ Else
 Exit Sub
 End If
 
+
+Sheets("Start").Select
+Range("b2").Select
 End Sub

@@ -170,5 +170,6 @@ Dim Ukoord As String
 Ukoord = Uclm & rownr
 AppWindow.TextBox61 = Munka1.Range(Ukoord).Value
 
-
+Sheets("Start").Select
+Range("b2").Select
 End Sub

@@ -16,4 +16,7 @@ Dim IDkoord As String
 IDkoord = IDoszlop & IDrw
 Range(IDkoord) = IDnr
 
+
+Sheets("Start").Select
+Range("b2").Select
 End Sub
