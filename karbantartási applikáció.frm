@@ -6,7 +6,8 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} AppWindow
    ClientTop       =   465
    ClientWidth     =   21765
    OleObjectBlob   =   "karbantartási applikáció.frx":0000
-   StartUpPosition =   1  'CenterOwner
+   ShowModal       =   0   'False
+   StartUpPosition =   2  'CenterScreen
 End
 Attribute VB_Name = "AppWindow"
 Attribute VB_GlobalNameSpace = False
@@ -14,12 +15,14 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub AdatfelvételMentés_Click()
+JelszóRejtés2
 LétszámMásolás
 LétszámÖsszesítés
 
 If AppWindow.TextBox11 = "" Then
 MsgBox "Bárcaszám megadása kötelezõ!" & vbCrLf & "Nem történt adatmentés."
 AdatfelvételLista
+JelszóRejtés
 Exit Sub
 End If
 
@@ -34,11 +37,11 @@ Törlés
 Idõszámítás
 End If
 
-
+JelszóRejtés
 End Sub
 
 Private Sub CommandButton1_Click()
-
+JelszóRejtés2
 If AppWindow.TextBox73 = "" Then
 MsgBox "kérek egy gépszámot"
 'AdatfelvételLista3
@@ -47,48 +50,105 @@ If AppWindow.TextBox73 <> "" Then
 GépTörténet
 End If
 
-
+JelszóRejtés
 End Sub
+
 
 
 Private Sub CommandButton2_Click()
+JelszóRejtés2
+GépállásokSzáma
 'tb75
-
+JelszóRejtés
 End Sub
 
 Private Sub CommandButton3_Click()
+JelszóRejtés2
+IdegenXL2
+AdatfelvételLista8_Á1
+'AppWindow.TextBox76 = "Másolás kész"
 'tb76
-
+JelszóRejtés
 End Sub
 
 Private Sub CommandButton4_Click()
-'tb77
+JelszóRejtés2
+IdegenXL
+AdatfelvételLista4
+AdatfelfételLista5
+AdatfelvételLista6
+AdatfelvételLista7
+'AppWindow.TextBox77.Value = "Másolás kész"
 
+'tb77
+JelszóRejtés
 End Sub
 
 
 Private Sub CommandButton5_Click()
+JelszóRejtés2
 IDgenerálás3
 ID_generálás3
 AdatokMásolása3
-
+JelszóRejtés
 End Sub
 
 Private Sub CommandButton6_Click()
-
+JelszóRejtés2
 If AppWindow.TextBox54 = "" Then
 AdatfelvételLista2
+End If
+JelszóRejtés
+End Sub
+
+
+Private Sub CommandButton7_Click()
+If AppWindow.TextBox98 = "jelszó" Or AppWindow.TextBox98 = "password" Then
+
+AppWindow.MultiPage1.page4.Visible = True
+Else
+AppWindow.MultiPage1.page4.Visible = False
+End If
+
+End Sub
+
+Private Sub CommandButton8_Click()
+If AppWindow.TextBox99 = "sja266" Then
+JelszóRejtés3
+Else
+MsgBox "Nem megfelelõ betekintési jelszó!"
+End If
+End Sub
+
+Private Sub CommandButton9_Click()
+
+If AppWindow.TextBox100 = "sja266" Then
+JelszóRejtés2
+AppWindow.MultiPage1.page4.Visible = True
+AppWindow.MultiPage1.page5.Visible = True
+AppWindow.Frame19.Visible = True
+AppWindow.Frame20.Visible = True
+AdatfelvételLista10
+AdatfelvételLista11
+JelszóRejtés
+Else
+MsgBox "Nem megfelelõ jelszó!"
+AppWindow.MultiPage1.page4.Visible = False
+AppWindow.MultiPage1.page5.Visible = False
+AppWindow.Frame19.Visible = False
+AppWindow.Frame20.Visible = False
 End If
 
 End Sub
 
 Private Sub NévsorFrissítés_Click()
-
+JelszóRejtés2
 BárcaKeres
-
+JelszóRejtés
 End Sub
 
 Private Sub NyomonkövetõFrissítés_Click()
+JelszóRejtés2
 If AppWindow.TextBox62 <> "" Then
 
 'TartalomEllenõrzés2
@@ -99,22 +159,23 @@ AdatokMentése
 Törlés2
 AdatfelvételLista2
 End If
-
+JelszóRejtés
 End Sub
 
 Private Sub NyomonkövetõSzerkesztés_Click()
-
+JelszóRejtés2
 If ListBox20.ListCount = 0 Then
 MsgBox "Nincs kiválasztott sor." & vbCrLf & "A lista megjenítéshez kattints a FRISSÍTÉS gombra."
 Exit Sub
 Else
 MunkaSzerkesztés
 End If
+JelszóRejtés
 End Sub
 
 
 Private Sub UserForm_Initialize()
-
+JelszóRejtés2
     ' - AdatfelvételTerület - '
     ComboBox1.AddItem "67000"
     ComboBox1.AddItem "28000"
@@ -128,42 +189,49 @@ Private Sub UserForm_Initialize()
     ComboBox3.AddItem "Igen"
     ComboBox3.AddItem "Nem"
     ' - AdatfelvételStátusz - '
-    ComboBox4.AddItem "Alkatrészre vár"
-    ComboBox4.AddItem "Azonosított hiba - javítás alatt"
-    ComboBox4.AddItem "Gépkezelõ megoldotta"
-    ComboBox4.AddItem "Hibakeresés"
-    ComboBox4.AddItem "Javítás nélkül lezárva"
-    ComboBox4.AddItem "Javított"
-    ComboBox4.AddItem "Nem megkezdett javítás"
-    ComboBox4.AddItem "Összeszerelésre vár"
-    ComboBox4.AddItem "Összeszerelve tesztre vár"
-    ComboBox4.AddItem "Törölve"
+    ComboBox4.AddItem Munka12.Range("a2").Value
+    ComboBox4.AddItem Munka12.Range("a3").Value
+    ComboBox4.AddItem Munka12.Range("a4").Value
+    ComboBox4.AddItem Munka12.Range("a5").Value
+    ComboBox4.AddItem Munka12.Range("a6").Value
+    ComboBox4.AddItem Munka12.Range("a7").Value
+    ComboBox4.AddItem Munka12.Range("a8").Value
+    ComboBox4.AddItem Munka12.Range("a9").Value
+    ComboBox4.AddItem Munka12.Range("a10").Value
+    ComboBox4.AddItem Munka12.Range("a11").Value
+    ComboBox4.AddItem Munka12.Range("a12").Value
+    ComboBox4.AddItem Munka12.Range("a13").Value
+  
     ' - NyomonkövetõStátusz - '
-    ComboBox5.AddItem "Alkatrészre vár"
-    ComboBox5.AddItem "Azonosított hiba - javítás alatt"
-    ComboBox5.AddItem "Gépkezelõ megoldotta"
-    ComboBox5.AddItem "Hibakeresés"
-    ComboBox5.AddItem "Javítás nélkül lezárva"
-    ComboBox5.AddItem "Javított"
-    ComboBox5.AddItem "Nem megkezdett javítás"
-    ComboBox5.AddItem "Összeszerelésre vár"
-    ComboBox5.AddItem "Összeszerelve tesztre vár"
-    ComboBox5.AddItem "Törölve"
+    ComboBox5.AddItem Munka12.Range("a2").Value
+    ComboBox5.AddItem Munka12.Range("a3").Value
+    ComboBox5.AddItem Munka12.Range("a4").Value
+    ComboBox5.AddItem Munka12.Range("a5").Value
+    ComboBox5.AddItem Munka12.Range("a6").Value
+    ComboBox5.AddItem Munka12.Range("a7").Value
+    ComboBox5.AddItem Munka12.Range("a8").Value
+    ComboBox5.AddItem Munka12.Range("a9").Value
+    ComboBox5.AddItem Munka12.Range("a10").Value
+    ComboBox5.AddItem Munka12.Range("a11").Value
+    ComboBox5.AddItem Munka12.Range("a12").Value
+
     ' - NyomonkövetõMérés - '
     ComboBox6.AddItem "Igen"
     ComboBox6.AddItem "Nem"
     ' - NyomonkövetõFelelõs - '
-    ComboBox7.AddItem "Csorba Dávid"
-    ComboBox7.AddItem "Dénes András"
-    ComboBox7.AddItem "Gajdos Péter"
-    ComboBox7.AddItem "Haik Dávid"
-    ComboBox7.AddItem "Kiss Máté"
-    ComboBox7.AddItem "Kónyi István"
-    ComboBox7.AddItem "Nedvesi Csaba Péter"
-    ComboBox7.AddItem "Németh Szilárd"
-    ComboBox7.AddItem "Takács Dávid"
-    ComboBox7.AddItem "Takács Róbert"
-    ComboBox7.AddItem "Takács Tivadar"
-    ComboBox7.AddItem "Toth Sándor"
-  
+    ComboBox7.AddItem Munka12.Range("c2").Value
+    ComboBox7.AddItem Munka12.Range("c3").Value
+    ComboBox7.AddItem Munka12.Range("c4").Value
+    ComboBox7.AddItem Munka12.Range("c5").Value
+    ComboBox7.AddItem Munka12.Range("c6").Value
+    ComboBox7.AddItem Munka12.Range("c7").Value
+    ComboBox7.AddItem Munka12.Range("c8").Value
+    ComboBox7.AddItem Munka12.Range("c9").Value
+    ComboBox7.AddItem Munka12.Range("c10").Value
+    ComboBox7.AddItem Munka12.Range("c11").Value
+    ComboBox7.AddItem Munka12.Range("c12").Value
+    ComboBox7.AddItem Munka12.Range("c13").Value
+    
+    
+  JelszóRejtés
 End Sub

@@ -2,6 +2,8 @@ Attribute VB_Name = "FunctionIdõszámítás"
 Option Explicit
 
 Sub Idõszámítás()
+'JelszóRejtés2
+
 ' - -tól koordináta - '
 Sheets("adatok").Select
 Columns("j:j").Select
@@ -53,4 +55,6 @@ End If
 
 Sheets("Start").Select
 Range("b2").Select
+
+'JelszóRejtés
 End Sub

@@ -2,6 +2,7 @@ Attribute VB_Name = "FunctionAdatfelvételLista2"
 Option Explicit
 
 Sub AdatfelvételLista2()
+'JelszóRejtés2
 
 Sheets("szûrõ_transfer").Select
 Columns("a:v").Select
@@ -50,4 +51,6 @@ Range("a1").Select
 
 Sheets("Start").Select
 Range("b2").Select
+
+'JelszóRejtés
 End Sub

@@ -2,6 +2,7 @@ Attribute VB_Name = "FunctionTartalomEllenõrzés2"
 Option Explicit
 
 Sub TartalomEllenõrzés2()
+'JelszóRejtés2
 
 'If AppWindow.TextBox49 = "" Then
 'MsgBox "Záró idõpont (-ig) hiányzik!"
@@ -24,4 +25,5 @@ Sub TartalomEllenõrzés2()
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

@@ -2,7 +2,7 @@ Attribute VB_Name = "FunctionTartalomEllenõrzés"
 Option Explicit
 
 Sub TartalomEllenõrzés()
-
+'JelszóRejtés2
 'If AppWindow.TextBox1 = "" Then
 'MsgBox "Munkaszám hiányzik!"
 'ElseIf AppWindow.TextBox10 = "" Then
@@ -28,4 +28,5 @@ Sub TartalomEllenõrzés()
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

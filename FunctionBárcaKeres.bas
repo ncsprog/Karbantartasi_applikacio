@@ -2,7 +2,7 @@ Attribute VB_Name = "FunctionBárcaKeres"
 Option Explicit
 
 Sub BárcaKeres()
-
+'JelszóRejtés2
 ' - Lista koordináta - '
 
 Sheets("névsor").Select
@@ -23,4 +23,7 @@ AppWindow.ListBox21.List = rngList.Value
 
 Sheets("Start").Select
 Range("b2").Select
+
+Worksheets("névsor").Visible = False
+'JelszóRejtés
 End Sub

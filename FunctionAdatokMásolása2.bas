@@ -1,5 +1,6 @@
 Attribute VB_Name = "FunctionAdatokMásolása2"
 Sub AdatokMásolása2()
+'JelszóRejtés2
 
 ' - Bárcaszám   "B:B" - '
 
@@ -279,5 +280,7 @@ End If
 
 Sheets("Start").Select
 Range("b2").Select
+
+'JelszóRejtés
 End Sub
 

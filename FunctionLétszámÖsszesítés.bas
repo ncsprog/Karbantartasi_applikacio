@@ -2,7 +2,7 @@ Attribute VB_Name = "FunctionLétszámÖsszesítés"
 Option Explicit
 
 Sub LétszámÖsszesítés()
-
+'JelszóRejtés2
 
 Sheets("Létszám").Select
 Columns("a:a").Select
@@ -26,4 +26,5 @@ AppWindow.TextBox80.Value = létszám
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

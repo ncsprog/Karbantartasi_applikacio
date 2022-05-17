@@ -2,6 +2,7 @@ Attribute VB_Name = "FunctionLétszámMásolás"
 Option Explicit
 
 Sub LétszámMásolás()
+'JelszóRejtés2
 
 Sheets("létszám").Select
 Columns("b:b").Select
@@ -598,4 +599,5 @@ End If
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

@@ -2,6 +2,7 @@ Attribute VB_Name = "FunctionMunkaSzerkesztés"
 Option Explicit
 
 Sub MunkaSzerkesztés()
+'JelszóRejtés2
 
 'ez vissza adja a kijelölt sor ID-t.
 
@@ -172,4 +173,5 @@ AppWindow.TextBox61 = Munka1.Range(Ukoord).Value
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

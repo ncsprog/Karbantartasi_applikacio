@@ -13,3 +13,21 @@ Option Explicit
 'ID_generálás3 - megbeszéléshez
 'AdatokMásolása3 - megbeszéléshez
 
+'Külsõ filok elérhetõségét a véglegesítéskor pontosan megadni!
+Sub pw()
+'JelszóRejtés2
+
+Worksheets("adatok").Visible = True
+Munka3.Unprotect "asguard"
+Worksheets("szûrõ_transfer").Visible = True
+Munka3.Unprotect "asguard"
+
+Worksheets("szûrõ_transfer").Visible = False
+Munka3.Protect "asguard"
+Worksheets("adatok").Visible = False
+Munka3.Protect "asguard"
+'JelszóRejtés
+End Sub
+
+
+

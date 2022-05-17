@@ -2,6 +2,7 @@ Attribute VB_Name = "FunctionTörlés"
 Option Explicit
 
 Sub Törlés()
+'JelszóRejtés2
 
 AppWindow.TextBox11 = ""
 AppWindow.TextBox1 = ""
@@ -19,4 +20,5 @@ AppWindow.TextBox78 = ""
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub

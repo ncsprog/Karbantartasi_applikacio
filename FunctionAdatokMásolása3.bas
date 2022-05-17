@@ -2,7 +2,7 @@ Attribute VB_Name = "FunctionAdatokMásolása3"
 Option Explicit
 
 Sub AdatokMásolása3()
-
+'JelszóRejtés2
 ' - Dátum   "B:B" - '
 
 Sheets("Megbeszélés").Select
@@ -140,4 +140,5 @@ Range(Kkoord).Value = AppWindow.TextBox92.Value
 
 Sheets("Start").Select
 Range("b2").Select
+'JelszóRejtés
 End Sub
