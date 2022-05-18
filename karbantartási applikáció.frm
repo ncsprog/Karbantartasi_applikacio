@@ -55,6 +55,62 @@ End Sub
 
 
 
+
+
+Private Sub CommandButton10_Click()
+JelszóRejtés2
+If AppWindow.TextBox101 = "" Then
+MsgBox "Nincs megadva új státusz."
+Else
+StátuszSzerkesztés
+Rendezés
+AdatfelvételLista10
+End If
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton12_Click()
+JelszóRejtés2
+If ListBox29.ListCount = 0 Or ListBox29.ListCount < 0 Or ListBox29.ListCount > 21 Then
+MsgBox "Nincs kiválasztott státusz."
+Exit Sub
+Else
+StátuszSzerkeszt2
+Rendezés
+End If
+AdatfelvételLista10
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton13_Click()
+
+
+JelszóRejtés2
+If ListBox30.ListCount = 0 Then
+MsgBox "Nincs kiválasztott sor."
+Else
+FelelõsSzerkesztés2
+AdatfelvételLista11
+Rendezés2
+End If
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton14_Click()
+JelszóRejtés2
+If AppWindow.TextBox102 = "" Then
+MsgBox "Nincs megadva új státusz."
+Else
+FelelõsSzerkesztés
+Rendezés2
+AdatfelvételLista11
+End If
+JelszóRejtés
+End Sub
+
 Private Sub CommandButton2_Click()
 JelszóRejtés2
 GépállásokSzáma
@@ -113,7 +169,7 @@ End If
 End Sub
 
 Private Sub CommandButton8_Click()
-If AppWindow.TextBox99 = "sja266" Then
+If AppWindow.TextBox99 = "smj266" Then
 JelszóRejtés3
 Else
 MsgBox "Nem megfelelõ betekintési jelszó!"
@@ -122,7 +178,7 @@ End Sub
 
 Private Sub CommandButton9_Click()
 
-If AppWindow.TextBox100 = "sja266" Then
+If AppWindow.TextBox100 = "smj266" Then
 JelszóRejtés2
 AppWindow.MultiPage1.page4.Visible = True
 AppWindow.MultiPage1.page5.Visible = True
@@ -172,6 +228,8 @@ MunkaSzerkesztés
 End If
 JelszóRejtés
 End Sub
+
+
 
 
 Private Sub UserForm_Initialize()

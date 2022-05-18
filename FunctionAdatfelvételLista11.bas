@@ -4,12 +4,12 @@ Option Explicit
 Sub AdatfelvételLista11()
 ' - Felelõsök - '
 Sheets("alapadatok").Select
-Columns("c:c").Select
+Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
 ALrw = ActiveCell.row
 Dim ALoszlop As String
-ALoszlop = "c"
+ALoszlop = "d"
 Dim ALkoord As String
 ALkoord = ALoszlop & ALrw
 

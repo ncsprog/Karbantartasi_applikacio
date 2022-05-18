@@ -1,25 +1,25 @@
-Attribute VB_Name = "FunctionAdatfelvételLista10"
+Attribute VB_Name = "FunctionStátuszSzerkesztés_ad"
 Option Explicit
 
-Sub AdatfelvételLista10()
-' - Státuszok kezelése - '
+Sub StátuszSzerkesztés()
+
+'ez vissza adja a kijelölt sor ID-t.
+
 Sheets("alapadatok").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.row + 1
 Dim ALoszlop As String
 ALoszlop = "b"
 Dim ALkoord As String
 ALkoord = ALoszlop & ALrw
 
-' - Lista kiírás - '
+Munka12.Range(ALkoord) = AppWindow.TextBox101.Value
 
-Dim rngList As Range
-Set rngList = Munka12.Range("a2", ALkoord)
-AppWindow.ListBox29.List = rngList.Value
-
+AppWindow.TextBox101 = ""
 Sheets("Start").Select
 Range("b2").Select
 
+'JelszóRejtés
 End Sub
