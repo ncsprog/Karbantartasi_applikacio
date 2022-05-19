@@ -13,6 +13,13 @@ Option Explicit
 'ID_generálás3 - megbeszéléshez
 'AdatokMásolása3 - megbeszéléshez
 
+
+
+'Kulcsgépek ==> Rendelkezésre állás és összállásidõ idõszakra.xlsx  ==> FunctionIdegenXL2_Állásidõ  ==> transfer_kulcsgép   ==> LB27    ==> FunctionAdatfelvételLista8_Á1
+'Rendelkezésreállás ==> Állásidõ adott idõszakban.xlsx  ==> FunctionIdegenXL3_Rendelkezés   ==> transfer_rendelkezés    ==> LB31    ==> FunctionAdatfelvételLista9_R1
+'Gazdasági  ==> gazdasági lekérdezett adatok.xlsx   ==> FunctionIdegenXL_gazdasági  ==> transfer_gazdasági  ==> LB23,   LB24,   LB25,   LB26,   ==> FunctionAdatfelvételLista4_G1,  FunctionAdatfelvételLista5_2,  FunctionAdatfelvételList6_G3,  FunctionAdatfelvételLista7_G4
+
+
 'Külsõ filok elérhetõségét a véglegesítéskor pontosan megadni!
 Sub pw()
 'JelszóRejtés2

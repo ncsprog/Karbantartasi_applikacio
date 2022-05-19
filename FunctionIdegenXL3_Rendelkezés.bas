@@ -7,12 +7,12 @@ Sub IdegenXL3()
 
 
 'ki törli a korábbi forrásadatokat
-    Munka11.Range("a1:x10000") = ""
+    Munka14.Range("a1:v10000") = ""
     Range("a1").Select
          
     'megynyitja másik file-t
-    Workbooks.Open "\\rabart\frs$\sajat$\09049\Ncsp\programok\Forrásadatok\Állásidõ adott idõszakban.xlsx"
-    Windows("Állásidõ adott idõszakban.xlsx").Activate
+    Workbooks.Open "\\rabart\frs$\sajat$\09049\Ncsp\programok\Forrásadatok\Rendelkezésre állás és összállásidõ idõszakra.xlsx"
+    Windows("Rendelkezésre állás és összállásidõ idõszakra.xlsx").Activate
     'abban mókol:   kijelöli a kívánt adatokat
     'mettõl
     Sheets("FNDWRR").Select
@@ -32,8 +32,8 @@ Sub IdegenXL3()
    'mókol átt:  a kijelöltet átmásolja az emez füzetbe
     Selection.Copy
     Windows("Karbantartási applikáció.xlsm").Activate
-    Munka11.Range("a1").PasteSpecial xlPasteValues
-    Windows("Állásidõ adott idõszakban.xlsx").Activate
+    Munka14.Range("a1").PasteSpecial xlPasteValues
+    Windows("Rendelkezésre állás és összállásidõ idõszakra.xlsx").Activate
     ActiveWindow.Close
     Range("A1").Select
 

@@ -17,6 +17,8 @@ Munka8.Visible = xlSheetVeryHidden
 Munka10.Visible = xlSheetVeryHidden
 Munka11.Visible = xlSheetVeryHidden
 Munka12.Visible = xlSheetVeryHidden
+Munka14.Visible = xlSheetVeryHidden
+Munka15.Visible = xlSheetVeryHidden
 
 ' - blokkolás - '
 
@@ -32,6 +34,8 @@ Munka8.Protect "asaguard"
 Munka10.Protect "asaguard"
 Munka11.Protect "asaguard"
 Munka12.Protect "asaguard"
+Munka14.Protect "asaguard"
+Munka15.Protect "asaguard"
 
 'JelszóRejtés
 End Sub

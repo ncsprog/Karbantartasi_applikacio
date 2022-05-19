@@ -111,6 +111,24 @@ End If
 JelszóRejtés
 End Sub
 
+Private Sub CommandButton15_Click()
+
+If AppWindow.TextBox105 = "" Then
+MsgBox "Kérlek add meg az aktuális összlétszámot."
+JelszóRejtés2
+AdatfelvételLista12
+JelszóRejtés
+Exit Sub
+Else
+JelszóRejtés2
+AdatokMásolása4
+ID_generálás4
+AppWindow.TextBox105 = ""
+AdatfelvételLista12
+End If
+JelszóRejtés
+End Sub
+
 Private Sub CommandButton2_Click()
 JelszóRejtés2
 GépállásokSzáma
@@ -121,7 +139,10 @@ End Sub
 Private Sub CommandButton3_Click()
 JelszóRejtés2
 IdegenXL2
+IdegenXL3
 AdatfelvételLista8_Á1
+AdatfelvételLista9_R1
+AdatfelvételLista13
 'AppWindow.TextBox76 = "Másolás kész"
 'tb76
 JelszóRejtés
@@ -158,21 +179,13 @@ JelszóRejtés
 End Sub
 
 
-Private Sub CommandButton7_Click()
-If AppWindow.TextBox98 = "jelszó" Or AppWindow.TextBox98 = "password" Then
-
-AppWindow.MultiPage1.page4.Visible = True
-Else
-AppWindow.MultiPage1.page4.Visible = False
-End If
-
-End Sub
-
 Private Sub CommandButton8_Click()
 If AppWindow.TextBox99 = "smj266" Then
 JelszóRejtés3
+AppWindow.TextBox99 = ""
 Else
 MsgBox "Nem megfelelõ betekintési jelszó!"
+AppWindow.TextBox99 = ""
 End If
 End Sub
 
@@ -184,15 +197,24 @@ AppWindow.MultiPage1.page4.Visible = True
 AppWindow.MultiPage1.page5.Visible = True
 AppWindow.Frame19.Visible = True
 AppWindow.Frame20.Visible = True
+AppWindow.Frame21.Visible = True
+AppWindow.Frame23.Visible = True
+
 AdatfelvételLista10
 AdatfelvételLista11
 JelszóRejtés
+AppWindow.TextBox100 = ""
 Else
 MsgBox "Nem megfelelõ jelszó!"
 AppWindow.MultiPage1.page4.Visible = False
 AppWindow.MultiPage1.page5.Visible = False
 AppWindow.Frame19.Visible = False
 AppWindow.Frame20.Visible = False
+AppWindow.Frame21.Visible = False
+AppWindow.Frame23.Visible = False
+AppWindow.TextBox100 = ""
+
+
 End If
 
 End Sub
@@ -232,6 +254,10 @@ End Sub
 
 
 
+Private Sub TextBox103_Change()
+
+End Sub
+
 Private Sub UserForm_Initialize()
 JelszóRejtés2
     ' - AdatfelvételTerület - '
@@ -247,48 +273,85 @@ JelszóRejtés2
     ComboBox3.AddItem "Igen"
     ComboBox3.AddItem "Nem"
     ' - AdatfelvételStátusz - '
-    ComboBox4.AddItem Munka12.Range("a2").Value
-    ComboBox4.AddItem Munka12.Range("a3").Value
-    ComboBox4.AddItem Munka12.Range("a4").Value
-    ComboBox4.AddItem Munka12.Range("a5").Value
-    ComboBox4.AddItem Munka12.Range("a6").Value
-    ComboBox4.AddItem Munka12.Range("a7").Value
-    ComboBox4.AddItem Munka12.Range("a8").Value
-    ComboBox4.AddItem Munka12.Range("a9").Value
-    ComboBox4.AddItem Munka12.Range("a10").Value
-    ComboBox4.AddItem Munka12.Range("a11").Value
-    ComboBox4.AddItem Munka12.Range("a12").Value
-    ComboBox4.AddItem Munka12.Range("a13").Value
+    ComboBox4.AddItem Munka12.Range("b2").Value
+    ComboBox4.AddItem Munka12.Range("b3").Value
+    ComboBox4.AddItem Munka12.Range("b4").Value
+    ComboBox4.AddItem Munka12.Range("b5").Value
+    ComboBox4.AddItem Munka12.Range("b6").Value
+    ComboBox4.AddItem Munka12.Range("b7").Value
+    ComboBox4.AddItem Munka12.Range("b8").Value
+    ComboBox4.AddItem Munka12.Range("b9").Value
+    ComboBox4.AddItem Munka12.Range("b10").Value
+    ComboBox4.AddItem Munka12.Range("b11").Value
+    ComboBox4.AddItem Munka12.Range("b12").Value
+    ComboBox4.AddItem Munka12.Range("b13").Value
+    ComboBox4.AddItem Munka12.Range("b14").Value
+    ComboBox4.AddItem Munka12.Range("b15").Value
+    ComboBox4.AddItem Munka12.Range("b16").Value
+    ComboBox4.AddItem Munka12.Range("b17").Value
+    ComboBox4.AddItem Munka12.Range("b18").Value
+    ComboBox4.AddItem Munka12.Range("b19").Value
+    ComboBox4.AddItem Munka12.Range("b20").Value
+    ComboBox4.AddItem Munka12.Range("b21").Value
+    
   
     ' - NyomonkövetõStátusz - '
-    ComboBox5.AddItem Munka12.Range("a2").Value
-    ComboBox5.AddItem Munka12.Range("a3").Value
-    ComboBox5.AddItem Munka12.Range("a4").Value
-    ComboBox5.AddItem Munka12.Range("a5").Value
-    ComboBox5.AddItem Munka12.Range("a6").Value
-    ComboBox5.AddItem Munka12.Range("a7").Value
-    ComboBox5.AddItem Munka12.Range("a8").Value
-    ComboBox5.AddItem Munka12.Range("a9").Value
-    ComboBox5.AddItem Munka12.Range("a10").Value
-    ComboBox5.AddItem Munka12.Range("a11").Value
-    ComboBox5.AddItem Munka12.Range("a12").Value
+    ComboBox5.AddItem Munka12.Range("b2").Value
+    ComboBox5.AddItem Munka12.Range("b3").Value
+    ComboBox5.AddItem Munka12.Range("b4").Value
+    ComboBox5.AddItem Munka12.Range("b5").Value
+    ComboBox5.AddItem Munka12.Range("b6").Value
+    ComboBox5.AddItem Munka12.Range("b7").Value
+    ComboBox5.AddItem Munka12.Range("b8").Value
+    ComboBox5.AddItem Munka12.Range("b9").Value
+    ComboBox5.AddItem Munka12.Range("b10").Value
+    ComboBox5.AddItem Munka12.Range("b11").Value
+    ComboBox5.AddItem Munka12.Range("b12").Value
+    ComboBox5.AddItem Munka12.Range("b13").Value
+    ComboBox5.AddItem Munka12.Range("b14").Value
+    ComboBox5.AddItem Munka12.Range("b15").Value
+    ComboBox5.AddItem Munka12.Range("b16").Value
+    ComboBox5.AddItem Munka12.Range("b17").Value
+    ComboBox5.AddItem Munka12.Range("b18").Value
+    ComboBox5.AddItem Munka12.Range("b19").Value
+    ComboBox5.AddItem Munka12.Range("b20").Value
+    ComboBox5.AddItem Munka12.Range("b21").Value
+    
 
     ' - NyomonkövetõMérés - '
     ComboBox6.AddItem "Igen"
     ComboBox6.AddItem "Nem"
     ' - NyomonkövetõFelelõs - '
-    ComboBox7.AddItem Munka12.Range("c2").Value
-    ComboBox7.AddItem Munka12.Range("c3").Value
-    ComboBox7.AddItem Munka12.Range("c4").Value
-    ComboBox7.AddItem Munka12.Range("c5").Value
-    ComboBox7.AddItem Munka12.Range("c6").Value
-    ComboBox7.AddItem Munka12.Range("c7").Value
-    ComboBox7.AddItem Munka12.Range("c8").Value
-    ComboBox7.AddItem Munka12.Range("c9").Value
-    ComboBox7.AddItem Munka12.Range("c10").Value
-    ComboBox7.AddItem Munka12.Range("c11").Value
-    ComboBox7.AddItem Munka12.Range("c12").Value
-    ComboBox7.AddItem Munka12.Range("c13").Value
+    ComboBox7.AddItem Munka12.Range("d2").Value
+    ComboBox7.AddItem Munka12.Range("d3").Value
+    ComboBox7.AddItem Munka12.Range("d4").Value
+    ComboBox7.AddItem Munka12.Range("d5").Value
+    ComboBox7.AddItem Munka12.Range("d6").Value
+    ComboBox7.AddItem Munka12.Range("d7").Value
+    ComboBox7.AddItem Munka12.Range("d8").Value
+    ComboBox7.AddItem Munka12.Range("d9").Value
+    ComboBox7.AddItem Munka12.Range("d10").Value
+    ComboBox7.AddItem Munka12.Range("d11").Value
+    ComboBox7.AddItem Munka12.Range("d12").Value
+    ComboBox7.AddItem Munka12.Range("d13").Value
+    ComboBox7.AddItem Munka12.Range("d14").Value
+    ComboBox7.AddItem Munka12.Range("d15").Value
+    ComboBox7.AddItem Munka12.Range("d16").Value
+    ComboBox7.AddItem Munka12.Range("d17").Value
+    ComboBox7.AddItem Munka12.Range("d18").Value
+    ComboBox7.AddItem Munka12.Range("d19").Value
+    ComboBox7.AddItem Munka12.Range("d20").Value
+    ComboBox7.AddItem Munka12.Range("d21").Value
+    ComboBox7.AddItem Munka12.Range("d22").Value
+    ComboBox7.AddItem Munka12.Range("d23").Value
+    ComboBox7.AddItem Munka12.Range("d24").Value
+    ComboBox7.AddItem Munka12.Range("d25").Value
+    ComboBox7.AddItem Munka12.Range("d26").Value
+    ComboBox7.AddItem Munka12.Range("d27").Value
+    ComboBox7.AddItem Munka12.Range("d28").Value
+    ComboBox7.AddItem Munka12.Range("d29").Value
+    ComboBox7.AddItem Munka12.Range("d30").Value
+    ComboBox7.AddItem Munka12.Range("d31").Value
     
     
   JelszóRejtés
