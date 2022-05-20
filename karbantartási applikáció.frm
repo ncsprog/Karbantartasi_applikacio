@@ -40,6 +40,7 @@ End If
 JelszóRejtés
 End Sub
 
+
 Private Sub CommandButton1_Click()
 JelszóRejtés2
 If AppWindow.TextBox73 = "" Then
@@ -129,10 +130,117 @@ End If
 JelszóRejtés
 End Sub
 
+Private Sub CommandButton16_Click()
+JelszóRejtés2
+If AppWindow.TextBox106 = "" Then
+BárcaKeres_Frissít
+Else
+BárcaKeres_Keres
+End If
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton17_Click()
+
+JelszóRejtés2
+If AppWindow.TextBox107 = "" Then
+GépKeres
+Else
+GépKeres2
+'BárcaKeres_Keres
+End If
+JelszóRejtés
+
+
+
+
+End Sub
+
+Private Sub CommandButton18_Click()
+JelszóRejtés2
+If AppWindow.TextBox108 = "" Then
+MsgBox "Nincs megadva új státusz."
+Else
+KategóriaSzerkeszt
+Rendezés3
+AdatfelvételLista14
+End If
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton19_Click()
+JelszóRejtés2
+If ListBox37.ListCount = 0 Or ListBox37.ListCount < 0 Or ListBox37.ListCount > 21 Then
+MsgBox "Nincs kiválasztott kategória."
+Exit Sub
+Else
+KategóriaSzerkeszt2
+Rendezés3
+End If
+AdatfelvételLista14
+
+JelszóRejtés
+End Sub
+
 Private Sub CommandButton2_Click()
 JelszóRejtés2
 GépállásokSzáma
 'tb75
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton20_Click()
+JelszóRejtés2
+If AppWindow.TextBox109 = "" Then
+MsgBox "Nincs megadva új terület."
+Else
+TerületSzerkeszt
+Rendezés5
+AdatfelvételLista15
+End If
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton21_Click()
+JelszóRejtés2
+If ListBox38.ListCount = 0 Or ListBox38.ListCount < 0 Or ListBox38.ListCount > 21 Then
+MsgBox "Nincs kiválasztott státusz."
+Exit Sub
+Else
+TerületSzerkeszt2
+Rendezés
+End If
+AdatfelvételLista15
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton22_Click()
+JelszóRejtés2
+If AppWindow.TextBox110 = "" Then
+MsgBox "Nincs megadva új csapat."
+Else
+CsapatSzerkeszt
+Rendezés4
+AdatfelvételLista16
+End If
+
+JelszóRejtés
+End Sub
+
+Private Sub CommandButton23_Click()
+JelszóRejtés2
+If ListBox39.ListCount = 0 Or ListBox39.ListCount < 0 Or ListBox39.ListCount > 21 Then
+MsgBox "Nincs kiválasztott csapat."
+Exit Sub
+Else
+CsapatSzerkeszt2
+Rendezés4
+End If
+AdatfelvételLista16
+
 JelszóRejtés
 End Sub
 
@@ -199,9 +307,14 @@ AppWindow.Frame19.Visible = True
 AppWindow.Frame20.Visible = True
 AppWindow.Frame21.Visible = True
 AppWindow.Frame23.Visible = True
-
+AppWindow.Frame26.Visible = True
+AppWindow.Frame27.Visible = True
+AppWindow.Frame28.Visible = True
 AdatfelvételLista10
 AdatfelvételLista11
+AdatfelvételLista14
+AdatfelvételLista15
+AdatfelvételLista16
 JelszóRejtés
 AppWindow.TextBox100 = ""
 Else
@@ -212,17 +325,16 @@ AppWindow.Frame19.Visible = False
 AppWindow.Frame20.Visible = False
 AppWindow.Frame21.Visible = False
 AppWindow.Frame23.Visible = False
+AppWindow.Frame26.Visible = False
+AppWindow.Frame27.Visible = False
+AppWindow.Frame28.Visible = False
+
+
 AppWindow.TextBox100 = ""
 
 
 End If
 
-End Sub
-
-Private Sub NévsorFrissítés_Click()
-JelszóRejtés2
-BárcaKeres
-JelszóRejtés
 End Sub
 
 Private Sub NyomonkövetõFrissítés_Click()
@@ -261,14 +373,9 @@ End Sub
 Private Sub UserForm_Initialize()
 JelszóRejtés2
     ' - AdatfelvételTerület - '
-    ComboBox1.AddItem "67000"
-    ComboBox1.AddItem "28000"
-    ComboBox1.AddItem "Kovács"
+
     ' - AdatfelvételCsapat - '
-    ComboBox2.AddItem "Team I."
-    ComboBox2.AddItem "Team II."
-    ComboBox2.AddItem "Team III."
-    ComboBox2.AddItem "TPM"
+
     ' - AdatfelvételMérés - '
     ComboBox3.AddItem "Igen"
     ComboBox3.AddItem "Nem"
@@ -353,6 +460,74 @@ JelszóRejtés2
     ComboBox7.AddItem Munka12.Range("d30").Value
     ComboBox7.AddItem Munka12.Range("d31").Value
     
+    ' - Kategória - '
+    
+ ComboBox8.AddItem Munka12.Range("j2").Value
+    ComboBox8.AddItem Munka12.Range("j3").Value
+    ComboBox8.AddItem Munka12.Range("j4").Value
+    ComboBox8.AddItem Munka12.Range("j5").Value
+    ComboBox8.AddItem Munka12.Range("j6").Value
+    ComboBox8.AddItem Munka12.Range("j7").Value
+    ComboBox8.AddItem Munka12.Range("j8").Value
+    ComboBox8.AddItem Munka12.Range("j9").Value
+    ComboBox8.AddItem Munka12.Range("j10").Value
+    ComboBox8.AddItem Munka12.Range("j11").Value
+    ComboBox8.AddItem Munka12.Range("j12").Value
+    ComboBox8.AddItem Munka12.Range("j13").Value
+    ComboBox8.AddItem Munka12.Range("j14").Value
+    ComboBox8.AddItem Munka12.Range("j15").Value
+    ComboBox8.AddItem Munka12.Range("j16").Value
+    ComboBox8.AddItem Munka12.Range("j17").Value
+    ComboBox8.AddItem Munka12.Range("j18").Value
+    ComboBox8.AddItem Munka12.Range("j19").Value
+    ComboBox8.AddItem Munka12.Range("j20").Value
+    ComboBox8.AddItem Munka12.Range("j21").Value
+   
+     ' - Terület - '
+    
+ ComboBox1.AddItem Munka12.Range("p2").Value
+    ComboBox1.AddItem Munka12.Range("p3").Value
+    ComboBox1.AddItem Munka12.Range("p4").Value
+    ComboBox1.AddItem Munka12.Range("p5").Value
+    ComboBox1.AddItem Munka12.Range("p6").Value
+    ComboBox1.AddItem Munka12.Range("p7").Value
+    ComboBox1.AddItem Munka12.Range("p8").Value
+    ComboBox1.AddItem Munka12.Range("p9").Value
+    ComboBox1.AddItem Munka12.Range("p10").Value
+    ComboBox1.AddItem Munka12.Range("p11").Value
+    ComboBox1.AddItem Munka12.Range("p12").Value
+    ComboBox1.AddItem Munka12.Range("p13").Value
+    ComboBox1.AddItem Munka12.Range("p14").Value
+    ComboBox1.AddItem Munka12.Range("p15").Value
+    ComboBox1.AddItem Munka12.Range("p16").Value
+    ComboBox1.AddItem Munka12.Range("p17").Value
+    ComboBox1.AddItem Munka12.Range("p18").Value
+    ComboBox1.AddItem Munka12.Range("p19").Value
+    ComboBox1.AddItem Munka12.Range("p20").Value
+    ComboBox1.AddItem Munka12.Range("p21").Value
+    
+      ' - Csapat - '
+    
+ ComboBox2.AddItem Munka12.Range("m2").Value
+    ComboBox2.AddItem Munka12.Range("m3").Value
+    ComboBox2.AddItem Munka12.Range("m4").Value
+    ComboBox2.AddItem Munka12.Range("m5").Value
+    ComboBox2.AddItem Munka12.Range("m6").Value
+    ComboBox2.AddItem Munka12.Range("m7").Value
+    ComboBox2.AddItem Munka12.Range("m8").Value
+    ComboBox2.AddItem Munka12.Range("m9").Value
+    ComboBox2.AddItem Munka12.Range("m10").Value
+    ComboBox2.AddItem Munka12.Range("m11").Value
+    ComboBox2.AddItem Munka12.Range("m12").Value
+    ComboBox2.AddItem Munka12.Range("m13").Value
+    ComboBox2.AddItem Munka12.Range("m14").Value
+    ComboBox2.AddItem Munka12.Range("m15").Value
+    ComboBox2.AddItem Munka12.Range("m16").Value
+    ComboBox2.AddItem Munka12.Range("m17").Value
+    ComboBox2.AddItem Munka12.Range("m18").Value
+    ComboBox2.AddItem Munka12.Range("m19").Value
+    ComboBox2.AddItem Munka12.Range("m20").Value
+    ComboBox2.AddItem Munka12.Range("m21").Value
     
   JelszóRejtés
 End Sub
