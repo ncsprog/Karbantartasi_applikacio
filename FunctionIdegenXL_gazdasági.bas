@@ -13,12 +13,12 @@ Sub IdegenXL()
     Windows("gazdasági lekérdezett adatok.xlsx").Activate
     'abban mókol:   kijelöli a kívánt adatokat
     'mettõl
-    Sheets("RABA_Karbantartasi_koltsegek_i_").Select
+    'Munka1.Select
     Dim tólXL As Range
     Set tólXL = Range("a1")
     'meddig
-     Sheets("RABA_Karbantartasi_koltsegek_i_").Select
-     Columns("a:a").Select
+     'Sheets("FNDWRR").Select
+    Columns("a:a").Select
     Selection.End(xlDown).Select
     Dim sorXL As Long
     sorXL = ActiveCell.row

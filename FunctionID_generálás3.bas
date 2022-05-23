@@ -8,14 +8,14 @@ Dim most As Date
 most = Now()
 
 Sheets("Megbeszélés").Select
-Columns("L:L").Select
+Columns("O:O").Select
 Selection.End(xlDown).Select
 Dim ID_nr As Long
 ID_nr = ActiveCell + 1
 Dim ID_rw As Long
 ID_rw = ActiveCell.row + 1
 Dim ID_oszlop As String
-ID_oszlop = "L"
+ID_oszlop = "O"
 Dim ID_koord As String
 ID_koord = ID_oszlop & ID_rw
 Range(ID_koord) = most

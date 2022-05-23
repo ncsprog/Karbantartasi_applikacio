@@ -3,6 +3,7 @@ Option Explicit
 
 Sub AdatokMásolása3()
 'JelszóRejtés2
+
 ' - Dátum   "B:B" - '
 
 Sheets("Megbeszélés").Select
@@ -17,7 +18,7 @@ Bkoord = Boszlop & Brw
 Range(Bkoord).Value = Date
 
 
-' - Létszám - Futómû   "C:C" - '
+' - Délelõtt - Forrás: Team1 "C:C" - '
 
 Sheets("Megbeszélés").Select
 Columns("c:c").Select
@@ -28,10 +29,10 @@ Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
 Ckoord = Coszlop & Crw
-Range(Ckoord).Value = AppWindow.TextBox81.Value
+Range(Ckoord).Value = AppWindow.ListBox40.Value
 
 
-' - Létszám - Hídtest   "D:D" - '
+' - Délelõtt - Jegyzet: Team1 "D:D" - '
 
 Sheets("Megbeszélés").Select
 Columns("d:d").Select
@@ -42,9 +43,9 @@ Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
 Dkoord = Doszlop & Drw
-Range(Dkoord).Value = AppWindow.TextBox83.Value
+Range(Dkoord).Value = AppWindow.TextBox111.Value
 
-' - Létszám - Kovács   "E:E" - '
+' - Délelõtt - Forrás: Team2 "E:E" - '
 
 Sheets("Megbeszélés").Select
 Columns("e:e").Select
@@ -55,9 +56,9 @@ Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
 Ekoord = Eoszlop & Erw
-Range(Ekoord).Value = AppWindow.TextBox85.Value
+Range(Ekoord).Value = AppWindow.ListBox41.Value
 
-' - Délelõtt - Futómû "F:F" - '
+' - Délelõtt - Jegyzet: Team2 "F:F" - '
 
 Sheets("Megbeszélés").Select
 Columns("f:f").Select
@@ -68,9 +69,9 @@ Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
 Fkoord = Foszlop & Frw
-Range(Fkoord).Value = AppWindow.TextBox82.Value
+Range(Fkoord).Value = AppWindow.TextBox116.Value
 
-' - Délelõtt - Hídtest "G:G" - '
+' - Délelõtt - Forrás: Team3 "G:G" - '
 
 Sheets("Megbeszélés").Select
 Columns("g:g").Select
@@ -81,9 +82,9 @@ Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
 Gkoord = Goszlop & Grw
-Range(Gkoord).Value = AppWindow.TextBox84.Value
+Range(Gkoord).Value = AppWindow.ListBox42.Value
 
-' - Délelõtt - Kovács   "H:H" - '
+' - Délelõtt - Jegyzet: Team3 "H:H" - '
 
 Sheets("Megbeszélés").Select
 Columns("h:h").Select
@@ -94,9 +95,9 @@ Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
 Hkoord = Hoszlop & Hrw
-Range(Hkoord).Value = AppWindow.TextBox86.Value
+Range(Hkoord).Value = AppWindow.TextBox120.Value
 
-' - Délután - Futómû   "I:I" - '
+' - Délután - Forrás: Team1 "I:I" - '
 
 Sheets("Megbeszélés").Select
 Columns("i:i").Select
@@ -107,9 +108,9 @@ Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
 Ikoord = Ioszlop & Irw
-Range(Ikoord).Value = AppWindow.TextBox88.Value
+Range(Ikoord).Value = AppWindow.ListBox43.Value
 
-' - Délután - Hídtest   "J:J" - '
+' - Délután - Jegyzet: Team1 "J:J" - '
 
 Sheets("Megbeszélés").Select
 Columns("j:j").Select
@@ -120,9 +121,9 @@ Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
 Jkoord = Joszlop & Jrw
-Range(Jkoord).Value = AppWindow.TextBox90.Value
+Range(Jkoord).Value = AppWindow.TextBox124.Value
 
-' - Délután - Hídtest   "K:K" - '
+' - Délután - Forrás: Team2 "K:K" - '
 
 Sheets("Megbeszélés").Select
 Columns("k:k").Select
@@ -133,9 +134,46 @@ Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String
 Kkoord = Koszlop & Krw
-Range(Kkoord).Value = AppWindow.TextBox92.Value
+Range(Kkoord).Value = AppWindow.ListBox44.Value
 
+' - Délután - Jegyzet: Team2 "L:L" - '
 
+Sheets("Megbeszélés").Select
+Columns("l:l").Select
+Selection.End(xlDown).Select
+Dim Lrw As Long
+Lrw = ActiveCell.row + 1
+Dim Loszlop As String
+Loszlop = "l"
+Dim Lkoord As String
+Lkoord = Loszlop & Lrw
+Range(Lkoord).Value = AppWindow.TextBox128.Value
+
+' - Délután - Forrás: Team3 "M:M" - '
+
+Sheets("Megbeszélés").Select
+Columns("m:m").Select
+Selection.End(xlDown).Select
+Dim Mrw As Long
+Mrw = ActiveCell.row + 1
+Dim Moszlop As String
+Moszlop = "m"
+Dim Mkoord As String
+Mkoord = Moszlop & Mrw
+Range(Mkoord).Value = AppWindow.ListBox45.Value
+
+' - Délután - Jegyzet: Team3 "N:N" - '
+
+Sheets("Megbeszélés").Select
+Columns("n:n").Select
+Selection.End(xlDown).Select
+Dim Nrw As Long
+Nrw = ActiveCell.row + 1
+Dim Noszlop As String
+Noszlop = "n"
+Dim Nkoord As String
+Nkoord = Noszlop & Nrw
+Range(Nkoord).Value = AppWindow.TextBox132.Value
 
 
 Sheets("Start").Select

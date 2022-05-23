@@ -14,10 +14,9 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 Private Sub AdatfelvételMentés_Click()
 JelszóRejtés2
-LétszámMásolás
-LétszámÖsszesítés
 
 If AppWindow.TextBox11 = "" Then
 MsgBox "Bárcaszám megadása kötelezõ!" & vbCrLf & "Nem történt adatmentés."
@@ -272,15 +271,22 @@ End Sub
 
 Private Sub CommandButton5_Click()
 JelszóRejtés2
+IDgenerálás2
 IDgenerálás3
+ID_generálás2
 ID_generálás3
 AdatokMásolása3
+AdatokMásolása5
+LétszámÖsszesítés
 JelszóRejtés
 End Sub
 
 Private Sub CommandButton6_Click()
 JelszóRejtés2
-If AppWindow.TextBox54 = "" Then
+If AppWindow.ComboBox5 = "" Then
+MsgBox "Kérlek válaszd ki a státuszt."
+Exit Sub
+Else
 AdatfelvételLista2
 End If
 JelszóRejtés
@@ -367,6 +373,12 @@ End Sub
 
 
 Private Sub TextBox103_Change()
+
+End Sub
+
+Private Sub TextBox112_Change()
+
+AppWindow.TextBox112 = TextBox115 + TextBox114 + TextBox113
 
 End Sub
 
