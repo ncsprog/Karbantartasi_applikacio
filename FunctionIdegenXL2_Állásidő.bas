@@ -21,7 +21,7 @@ Sub IdegenXL2()
      Columns("a:a").Select
     Selection.End(xlDown).Select
     Dim sorXL As Long
-    sorXL = ActiveCell.row
+    sorXL = ActiveCell.Row
     Dim igXL As String
     igXL = "v" & sorXL
    

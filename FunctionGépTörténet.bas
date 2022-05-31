@@ -19,7 +19,7 @@ Sheets("adatok").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "u"
 Dim ALkoord As String
@@ -38,7 +38,7 @@ Sheets("szûrõ_transfer").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
-Trw = ActiveCell.row
+Trw = ActiveCell.Row
 Dim Toszlop As String
 Toszlop = "u"
 Dim Tkoord As String

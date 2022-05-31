@@ -8,7 +8,7 @@ Munka12.Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "j"
 Dim ALkoord As String

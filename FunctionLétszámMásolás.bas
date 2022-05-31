@@ -19,7 +19,7 @@ Sheets("létszám").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Brw As Long
-Brw = ActiveCell.row + 1
+Brw = ActiveCell.Row + 1
 Dim Boszlop As String
 Boszlop = "b"
 Dim Bkoord As String
@@ -34,7 +34,7 @@ Sheets("létszám").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim Crw As Long
-Crw = ActiveCell.row + 1
+Crw = ActiveCell.Row + 1
 Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
@@ -54,7 +54,7 @@ Sheets("létszám").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim Drw As Long
-Drw = ActiveCell.row + 1
+Drw = ActiveCell.Row + 1
 Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
@@ -72,7 +72,7 @@ Sheets("létszám").Select
 Columns("e:e").Select
 Selection.End(xlDown).Select
 Dim Erw As Long
-Erw = ActiveCell.row + 1
+Erw = ActiveCell.Row + 1
 Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
@@ -92,7 +92,7 @@ Sheets("létszám").Select
 Columns("f:f").Select
 Selection.End(xlDown).Select
 Dim Frw As Long
-Frw = ActiveCell.row + 1
+Frw = ActiveCell.Row + 1
 Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
@@ -110,7 +110,7 @@ Sheets("létszám").Select
 Columns("g:g").Select
 Selection.End(xlDown).Select
 Dim Grw As Long
-Grw = ActiveCell.row + 1
+Grw = ActiveCell.Row + 1
 Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
@@ -128,7 +128,7 @@ Sheets("létszám").Select
 Columns("h:h").Select
 Selection.End(xlDown).Select
 Dim Hrw As Long
-Hrw = ActiveCell.row + 1
+Hrw = ActiveCell.Row + 1
 Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
@@ -149,7 +149,7 @@ Sheets("létszám").Select
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim Irw As Long
-Irw = ActiveCell.row + 1
+Irw = ActiveCell.Row + 1
 Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
@@ -167,7 +167,7 @@ Sheets("létszám").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Jrw As Long
-Jrw = ActiveCell.row + 1
+Jrw = ActiveCell.Row + 1
 Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
@@ -186,7 +186,7 @@ Sheets("létszám").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Krw As Long
-Krw = ActiveCell.row + 1
+Krw = ActiveCell.Row + 1
 Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String
@@ -206,7 +206,7 @@ Sheets("létszám").Select
 Columns("l:l").Select
 Selection.End(xlDown).Select
 Dim Lrw As Long
-Lrw = ActiveCell.row + 1
+Lrw = ActiveCell.Row + 1
 Dim Loszlop As String
 Loszlop = "l"
 Dim Lkoord As String
@@ -224,7 +224,7 @@ Sheets("létszám").Select
 Columns("m:m").Select
 Selection.End(xlDown).Select
 Dim Mrw As Long
-Mrw = ActiveCell.row + 1
+Mrw = ActiveCell.Row + 1
 Dim Moszlop As String
 Moszlop = "m"
 Dim Mkoord As String
@@ -242,7 +242,7 @@ Sheets("létszám").Select
 Columns("n:n").Select
 Selection.End(xlDown).Select
 Dim Nrw As Long
-Nrw = ActiveCell.row + 1
+Nrw = ActiveCell.Row + 1
 Dim Noszlop As String
 Noszlop = "n"
 Dim Nkoord As String
@@ -262,7 +262,7 @@ Sheets("létszám").Select
 Columns("o:o").Select
 Selection.End(xlDown).Select
 Dim Orw As Long
-Orw = ActiveCell.row + 1
+Orw = ActiveCell.Row + 1
 Dim Ooszlop As String
 Ooszlop = "o"
 Dim Okoord As String
@@ -280,7 +280,7 @@ Sheets("létszám").Select
 Columns("p:p").Select
 Selection.End(xlDown).Select
 Dim Prw As Long
-Prw = ActiveCell.row + 1
+Prw = ActiveCell.Row + 1
 Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
@@ -298,7 +298,7 @@ Sheets("létszám").Select
 Columns("q:q").Select
 Selection.End(xlDown).Select
 Dim Qrw As Long
-Qrw = ActiveCell.row + 1
+Qrw = ActiveCell.Row + 1
 Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
@@ -319,7 +319,7 @@ Sheets("létszám").Select
 Columns("r:r").Select
 Selection.End(xlDown).Select
 Dim Rrw As Long
-Rrw = ActiveCell.row + 1
+Rrw = ActiveCell.Row + 1
 Dim Roszlop As String
 Roszlop = "r"
 Dim Rkoord As String
@@ -337,7 +337,7 @@ Sheets("létszám").Select
 Columns("s:s").Select
 Selection.End(xlDown).Select
 Dim Srw As Long
-Srw = ActiveCell.row + 1
+Srw = ActiveCell.Row + 1
 Dim Soszlop As String
 Soszlop = "s"
 Dim Skoord As String
@@ -355,7 +355,7 @@ Sheets("létszám").Select
 Columns("t:t").Select
 Selection.End(xlDown).Select
 Dim Trw As Long
-Trw = ActiveCell.row + 1
+Trw = ActiveCell.Row + 1
 Dim Toszlop As String
 Toszlop = "t"
 Dim Tkoord As String
@@ -375,7 +375,7 @@ Sheets("létszám").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim Urw As Long
-Urw = ActiveCell.row + 1
+Urw = ActiveCell.Row + 1
 Dim Uoszlop As String
 Uoszlop = "u"
 Dim Ukoord As String
@@ -393,7 +393,7 @@ Sheets("létszám").Select
 Columns("v:v").Select
 Selection.End(xlDown).Select
 Dim Vrw As Long
-Vrw = ActiveCell.row + 1
+Vrw = ActiveCell.Row + 1
 Dim Voszlop As String
 Voszlop = "v"
 Dim Vkoord As String
@@ -411,7 +411,7 @@ Sheets("létszám").Select
 Columns("w:w").Select
 Selection.End(xlDown).Select
 Dim Wrw As Long
-Wrw = ActiveCell.row + 1
+Wrw = ActiveCell.Row + 1
 Dim Woszlop As String
 Woszlop = "w"
 Dim Wkoord As String
@@ -431,7 +431,7 @@ Sheets("létszám").Select
 Columns("x:x").Select
 Selection.End(xlDown).Select
 Dim Xrw As Long
-Xrw = ActiveCell.row + 1
+Xrw = ActiveCell.Row + 1
 Dim Xoszlop As String
 Xoszlop = "x"
 Dim Xkoord As String
@@ -449,7 +449,7 @@ Sheets("létszám").Select
 Columns("y:y").Select
 Selection.End(xlDown).Select
 Dim Yrw As Long
-Yrw = ActiveCell.row + 1
+Yrw = ActiveCell.Row + 1
 Dim Yoszlop As String
 Yoszlop = "y"
 Dim Ykoord As String
@@ -467,7 +467,7 @@ Sheets("létszám").Select
 Columns("z:z").Select
 Selection.End(xlDown).Select
 Dim Zrw As Long
-Zrw = ActiveCell.row + 1
+Zrw = ActiveCell.Row + 1
 Dim Zoszlop As String
 Zoszlop = "z"
 Dim Zkoord As String
@@ -488,7 +488,7 @@ Sheets("létszám").Select
 Columns("aa:aa").Select
 Selection.End(xlDown).Select
 Dim AArw As Long
-AArw = ActiveCell.row + 1
+AArw = ActiveCell.Row + 1
 Dim AAoszlop As String
 AAoszlop = "aa"
 Dim AAkoord As String
@@ -506,7 +506,7 @@ Sheets("létszám").Select
 Columns("ab:ab").Select
 Selection.End(xlDown).Select
 Dim ABrw As Long
-ABrw = ActiveCell.row + 1
+ABrw = ActiveCell.Row + 1
 Dim ABoszlop As String
 ABoszlop = "ab"
 Dim ABkoord As String
@@ -524,7 +524,7 @@ Sheets("létszám").Select
 Columns("ac:ac").Select
 Selection.End(xlDown).Select
 Dim ACrw As Long
-ACrw = ActiveCell.row + 1
+ACrw = ActiveCell.Row + 1
 Dim ACoszlop As String
 ACoszlop = "ac"
 Dim ACkoord As String
@@ -544,7 +544,7 @@ Sheets("létszám").Select
 Columns("ad:ad").Select
 Selection.End(xlDown).Select
 Dim ADrw As Long
-ADrw = ActiveCell.row + 1
+ADrw = ActiveCell.Row + 1
 Dim ADoszlop As String
 ADoszlop = "ad"
 Dim ADkoord As String
@@ -562,7 +562,7 @@ Sheets("létszám").Select
 Columns("ae:ae").Select
 Selection.End(xlDown).Select
 Dim AErw As Long
-AErw = ActiveCell.row + 1
+AErw = ActiveCell.Row + 1
 Dim AEoszlop As String
 AEoszlop = "ae"
 Dim AEkoord As String
@@ -580,7 +580,7 @@ Sheets("létszám").Select
 Columns("af:af").Select
 Selection.End(xlDown).Select
 Dim AFrw As Long
-AFrw = ActiveCell.row + 1
+AFrw = ActiveCell.Row + 1
 Dim AFoszlop As String
 AFoszlop = "af"
 Dim AFkoord As String

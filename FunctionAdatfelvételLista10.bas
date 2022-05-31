@@ -7,7 +7,7 @@ Sheets("alapadatok").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "b"
 Dim ALkoord As String

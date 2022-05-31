@@ -16,6 +16,7 @@ AppWindow.ComboBox2 = ""
 AppWindow.ComboBox3 = ""
 AppWindow.ComboBox4 = ""
 AppWindow.TextBox78 = ""
+AppWindow.ComboBox8 = ""
 
 
 Sheets("Start").Select

@@ -10,7 +10,7 @@ Sheets("transfer_gazdasági").Select
 Columns("n:n").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "n"
 Dim ALkoord As String

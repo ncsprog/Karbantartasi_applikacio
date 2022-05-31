@@ -10,7 +10,7 @@ Sheets("Megbeszélés").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Brw As Long
-Brw = ActiveCell.row + 1
+Brw = ActiveCell.Row + 1
 Dim Boszlop As String
 Boszlop = "b"
 Dim Bkoord As String
@@ -24,7 +24,7 @@ Sheets("Megbeszélés").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim Crw As Long
-Crw = ActiveCell.row + 1
+Crw = ActiveCell.Row + 1
 Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
@@ -38,7 +38,7 @@ Sheets("Megbeszélés").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim Drw As Long
-Drw = ActiveCell.row + 1
+Drw = ActiveCell.Row + 1
 Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
@@ -51,7 +51,7 @@ Sheets("Megbeszélés").Select
 Columns("e:e").Select
 Selection.End(xlDown).Select
 Dim Erw As Long
-Erw = ActiveCell.row + 1
+Erw = ActiveCell.Row + 1
 Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
@@ -64,7 +64,7 @@ Sheets("Megbeszélés").Select
 Columns("f:f").Select
 Selection.End(xlDown).Select
 Dim Frw As Long
-Frw = ActiveCell.row + 1
+Frw = ActiveCell.Row + 1
 Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
@@ -77,7 +77,7 @@ Sheets("Megbeszélés").Select
 Columns("g:g").Select
 Selection.End(xlDown).Select
 Dim Grw As Long
-Grw = ActiveCell.row + 1
+Grw = ActiveCell.Row + 1
 Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
@@ -90,7 +90,7 @@ Sheets("Megbeszélés").Select
 Columns("h:h").Select
 Selection.End(xlDown).Select
 Dim Hrw As Long
-Hrw = ActiveCell.row + 1
+Hrw = ActiveCell.Row + 1
 Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
@@ -103,7 +103,7 @@ Sheets("Megbeszélés").Select
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim Irw As Long
-Irw = ActiveCell.row + 1
+Irw = ActiveCell.Row + 1
 Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
@@ -116,7 +116,7 @@ Sheets("Megbeszélés").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Jrw As Long
-Jrw = ActiveCell.row + 1
+Jrw = ActiveCell.Row + 1
 Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
@@ -129,7 +129,7 @@ Sheets("Megbeszélés").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Krw As Long
-Krw = ActiveCell.row + 1
+Krw = ActiveCell.Row + 1
 Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String
@@ -142,7 +142,7 @@ Sheets("Megbeszélés").Select
 Columns("l:l").Select
 Selection.End(xlDown).Select
 Dim Lrw As Long
-Lrw = ActiveCell.row + 1
+Lrw = ActiveCell.Row + 1
 Dim Loszlop As String
 Loszlop = "l"
 Dim Lkoord As String
@@ -155,7 +155,7 @@ Sheets("Megbeszélés").Select
 Columns("m:m").Select
 Selection.End(xlDown).Select
 Dim Mrw As Long
-Mrw = ActiveCell.row + 1
+Mrw = ActiveCell.Row + 1
 Dim Moszlop As String
 Moszlop = "m"
 Dim Mkoord As String
@@ -168,7 +168,7 @@ Sheets("Megbeszélés").Select
 Columns("n:n").Select
 Selection.End(xlDown).Select
 Dim Nrw As Long
-Nrw = ActiveCell.row + 1
+Nrw = ActiveCell.Row + 1
 Dim Noszlop As String
 Noszlop = "n"
 Dim Nkoord As String

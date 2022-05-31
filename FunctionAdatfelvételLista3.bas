@@ -9,7 +9,7 @@ Sheets("adatok").Select
 Columns("u:u").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "u"
 Dim ALkoord As String

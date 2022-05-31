@@ -13,7 +13,7 @@ Munka3.Select
 Columns("a:a").Select
 Selection.End(xlDown).Select
 Dim BKKrw As Integer
-BKKrw = ActiveCell.row
+BKKrw = ActiveCell.Row
 Dim BKKig As String
 BKKig = "d"
 Dim BKKkoord As String
@@ -28,7 +28,7 @@ Range("a1").Select
 Columns("a:a").Select
 Selection.End(xlDown).Select
 Dim BKKrw2 As Integer
-BKKrw2 = ActiveCell.row
+BKKrw2 = ActiveCell.Row
 Dim BKKig2 As String
 BKKig2 = "a"
 Dim BKKkoord2 As String
@@ -44,7 +44,7 @@ Range("a1").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim BKKrw3 As Integer
-BKKrw3 = ActiveCell.row
+BKKrw3 = ActiveCell.Row
 Dim BKKig3 As String
 BKKig3 = "d"
 Dim BKKkoord3 As String
@@ -59,7 +59,7 @@ Range("f1").PasteSpecial xlPasteValues
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "i"
 Dim ALkoord As String

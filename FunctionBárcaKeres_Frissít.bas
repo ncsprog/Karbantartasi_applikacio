@@ -9,7 +9,7 @@ Sheets("névsor").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "d"
 Dim ALkoord As String

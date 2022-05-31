@@ -8,7 +8,7 @@ Sheets("létszám").Select
 Columns("b:b").Select
 Selection.End(xlDown).Select
 Dim Brw As Long
-Brw = ActiveCell.row + 1
+Brw = ActiveCell.Row + 1
 Dim Boszlop As String
 Boszlop = "b"
 Dim Bkoord As String
@@ -22,7 +22,7 @@ Sheets("létszám").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim Crw As Long
-Crw = ActiveCell.row + 1
+Crw = ActiveCell.Row + 1
 Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
@@ -36,7 +36,7 @@ Sheets("létszám").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim Drw As Long
-Drw = ActiveCell.row + 1
+Drw = ActiveCell.Row + 1
 Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
@@ -49,7 +49,7 @@ Sheets("létszám").Select
 Columns("e:e").Select
 Selection.End(xlDown).Select
 Dim Erw As Long
-Erw = ActiveCell.row + 1
+Erw = ActiveCell.Row + 1
 Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
@@ -62,7 +62,7 @@ Sheets("létszám").Select
 Columns("f:f").Select
 Selection.End(xlDown).Select
 Dim Frw As Long
-Frw = ActiveCell.row + 1
+Frw = ActiveCell.Row + 1
 Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
@@ -75,7 +75,7 @@ Sheets("létszám").Select
 Columns("g:g").Select
 Selection.End(xlDown).Select
 Dim Grw As Long
-Grw = ActiveCell.row + 1
+Grw = ActiveCell.Row + 1
 Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
@@ -88,7 +88,7 @@ Sheets("létszám").Select
 Columns("h:h").Select
 Selection.End(xlDown).Select
 Dim Hrw As Long
-Hrw = ActiveCell.row + 1
+Hrw = ActiveCell.Row + 1
 Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
@@ -101,7 +101,7 @@ Sheets("létszám").Select
 Columns("i:i").Select
 Selection.End(xlDown).Select
 Dim Irw As Long
-Irw = ActiveCell.row + 1
+Irw = ActiveCell.Row + 1
 Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
@@ -114,7 +114,7 @@ Sheets("létszám").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Jrw As Long
-Jrw = ActiveCell.row + 1
+Jrw = ActiveCell.Row + 1
 Dim Joszlop As String
 Joszlop = "j"
 Dim Jkoord As String
@@ -127,7 +127,7 @@ Sheets("létszám").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Krw As Long
-Krw = ActiveCell.row + 1
+Krw = ActiveCell.Row + 1
 Dim Koszlop As String
 Koszlop = "k"
 Dim Kkoord As String

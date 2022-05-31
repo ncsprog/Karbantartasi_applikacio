@@ -34,6 +34,42 @@ Munka3.Protect "asguard"
 Worksheets("adatok").Visible = False
 Munka3.Protect "asguard"
 'JelszóRejtés
+
+Range("a1").Select
+ActiveSheet.Range("A1", A).AutoFilter Field:=3, Operator:= _
+        xlFilterValues, Criteria2:=Dif
+' - terület - TEAM 1. - '
+ActiveSheet.Range("A1", A).AutoFilter Field:=9, Operator:= _
+        xlFilterValues, Criteria1:="Team1."
+        
+  Range("C14").Select
+    Selection.AutoFilter
+Range("a1", A).Copy
+Range("z1").PasteSpecial xlPasteValues
+
+
+If Munka12.Range("y2").Value = "" And Munka12.Range("y3").Value = "" Then
+MsgBox "Nincs meghatározva idõ intervallum. Alapérték 1 nap."
+
+Range("a1").Select
+ActiveSheet.Range("A1", A).AutoFilter Field:=3, Operator:= _
+        xlFilterValues, Criteria1:=Array(Dday, D0)
+' - terület - TEAM 1. - '
+ActiveSheet.Range("A1", A).AutoFilter Field:=9, Operator:= _
+        xlFilterValues, Criteria1:="Team1."
+        
+  Range("C14").Select
+    Selection.AutoFilter
+        
+ElseIf Munka12.Range("y2").Value <> "" And Munka12.Range("y3").Value <> "" Then
+MsgBox "Vizsgált intervallum: " & DR & " nap."
+
+
+
+
+
+
+
 End Sub
 
 

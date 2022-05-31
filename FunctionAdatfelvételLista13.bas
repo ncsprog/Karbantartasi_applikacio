@@ -12,7 +12,7 @@ Sheets("adatok").Select
 Columns("w:w").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "w"
 Dim ALkoord As String
@@ -26,7 +26,7 @@ Range("a1").PasteSpecial xlPasteValues
 Columns("w:w").Select
 Selection.End(xlDown).Select
 Dim Dtrw As Long
-Dtrw = ActiveCell.row
+Dtrw = ActiveCell.Row
 Dim Dtoszlop As String
 Dtoszlop = "w"
 Dim Dtkoord As String

@@ -10,7 +10,7 @@ Sheets("gépek").Select
 Columns("c:c").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "c"
 Dim ALkoord As String

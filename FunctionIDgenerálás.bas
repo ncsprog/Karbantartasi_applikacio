@@ -10,7 +10,7 @@ Selection.End(xlDown).Select
 Dim IDnr As Long
 IDnr = ActiveCell + 1
 Dim IDrw As Long
-IDrw = ActiveCell.row + 1
+IDrw = ActiveCell.Row + 1
 Dim IDoszlop As String
 IDoszlop = "a"
 Dim IDkoord As String

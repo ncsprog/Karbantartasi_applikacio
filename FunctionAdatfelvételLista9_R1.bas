@@ -9,7 +9,7 @@ Sheets("transfer_rendelkezés").Select
 Columns("r:r").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "r"
 Dim ALkoord As String

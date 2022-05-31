@@ -12,7 +12,7 @@ Sheets("alapadatok").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row + 1
+ALrw = ActiveCell.Row + 1
 Dim ALoszlop As String
 ALoszlop = "d"
 Dim ALkoord As String

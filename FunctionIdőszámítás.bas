@@ -9,7 +9,7 @@ Sheets("adatok").Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
 Dim Tólrw As Long
-Tólrw = ActiveCell.row
+Tólrw = ActiveCell.Row
 Dim Tóloszlop As String
 Tóloszlop = "j"
 Dim Tólkoord As String
@@ -23,7 +23,7 @@ Sheets("adatok").Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
 Dim Igrw As Long
-Igrw = ActiveCell.row
+Igrw = ActiveCell.Row
 Dim Igoszlop As String
 Igoszlop = "k"
 Dim Igkoord As String
@@ -37,7 +37,7 @@ Sheets("adatok").Select
 Columns("l:l").Select
 Selection.End(xlDown).Select
 Dim Lrw As Long
-Lrw = ActiveCell.row + 1
+Lrw = ActiveCell.Row + 1
 Dim Loszlop As String
 Loszlop = "l"
 Dim Lkoord As String

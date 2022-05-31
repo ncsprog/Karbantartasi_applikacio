@@ -8,7 +8,7 @@ Munka12.Select
 Columns("p:p").Select
 Selection.End(xlDown).Select
 Dim ALrw As Long
-ALrw = ActiveCell.row
+ALrw = ActiveCell.Row
 Dim ALoszlop As String
 ALoszlop = "p"
 Dim ALkoord As String
