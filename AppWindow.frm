@@ -274,6 +274,7 @@ End Sub
 Private Sub CommandButton26_Click()
 JelszóRejtés2
 MegbeszélésDátumok
+MegbeszélésMásoló
 JelszóRejtés
 End Sub
 

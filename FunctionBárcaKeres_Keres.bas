@@ -43,8 +43,15 @@ Munka15.Select
 Range("a1").Select
 Columns("d:d").Select
 Selection.End(xlDown).Select
-Dim BKKrw3 As Integer
+Dim BKKrw3 As Long
 BKKrw3 = ActiveCell.Row
+Dim kilépõ As Long
+kilépõ = BKKrw3
+If kilépõ > 10000 Then
+MsgBox "Nincs találat."
+AppWindow.TextBox106 = ""
+Exit Sub
+Else
 Dim BKKig3 As String
 BKKig3 = "d"
 Dim BKKkoord3 As String
@@ -55,6 +62,8 @@ Selection.Copy
 'Range("a1:xx10000") = ""
 Range("f1").PasteSpecial xlPasteValues
 
+Selection.AutoFilter
+End If
 ' - szûrt adatot vissza ad - '
 Columns("i:i").Select
 Selection.End(xlDown).Select
