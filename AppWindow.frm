@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} AppWindow 
-   Caption         =   "Karbantartási kimutatások"
+   Caption         =   "Karbantartási adatgyûjtõ"
    ClientHeight    =   13410
    ClientLeft      =   120
    ClientTop       =   465
@@ -19,27 +19,35 @@ Private Sub AdatfelvételMentés_Click()
 JelszóRejtés2
 If AppWindow.TextBox11 = "" Then
 MsgBox "Bárcaszám megadása kötelezõ!"
+AdatfelvételLista
 Exit Sub
 End If
 
-If AppWindow.ComboBox8 = "" Then
-'If AppWindow.TextBox11 = "" And AppWindow.ComboBox8 = "" Then
-MsgBox "Kategóriát választani kötelezõ!" & vbCrLf & "Nem történt adatmentés."
+'If AppWindow.ComboBox8 = "" Then
+If AppWindow.TextBox11 <> "" Then
+ElseIf AppWindow.TextBox10 = "" Then
+MsgBox "Kategóriát választani kötelezõ!" & vbCrLf & "vagy" & vbCrLf & "Rábaszám hiányzik" & vbCrLf & vbCrLf & "Nem történt adatmentés."
+Exit Sub
+ElseIf AppWindow.ComboBox8 = "" Then
+MsgBox "Kategóriát választani kötelezõ!" & vbCrLf & "vagy" & vbCrLf & "Rábaszám hiányzik" & vbCrLf & vbCrLf & "Nem történt adatmentés."
 AdatfelvételLista
 JelszóRejtés
 Exit Sub
 End If
 
-If AppWindow.TextBox11 <> "" Then
+'If AppWindow.TextBox11 <> "" Then
 'TartalomEllenõrzés
 AdatokMásolása
 IDgenerálás
 ID_generálás
+IdõKalkulátor
 AdatokMentése
 AdatfelvételLista
 Törlés
-Idõszámítás
-End If
+'Idõszámítás
+'End If
+
+BoxInaktíváló
 
 JelszóRejtés
 End Sub
@@ -278,6 +286,13 @@ MegbeszélésMásoló
 JelszóRejtés
 End Sub
 
+Private Sub CommandButton27_Click()
+JelszóRejtés2
+MunkaSzerkesztés2
+BoxAktíváló
+JelszóRejtés
+End Sub
+
 Private Sub CommandButton3_Click()
 JelszóRejtés2
 IdegenXL2
@@ -329,13 +344,7 @@ End Sub
 
 
 Private Sub CommandButton8_Click()
-If AppWindow.TextBox99 = "smj266" Then
 JelszóRejtés3
-AppWindow.TextBox99 = ""
-Else
-MsgBox "Nem megfelelõ betekintési jelszó!"
-AppWindow.TextBox99 = ""
-End If
 End Sub
 
 Private Sub CommandButton9_Click()
@@ -352,7 +361,7 @@ AppWindow.Frame23.Visible = True
 AppWindow.Frame26.Visible = True
 AppWindow.Frame27.Visible = True
 AppWindow.Frame28.Visible = True
-'AppWindow.Frame41.Visible = True
+AppWindow.Frame17.Visible = True
 AdatfelvételLista10
 AdatfelvételLista11
 AdatfelvételLista14
@@ -373,7 +382,7 @@ AppWindow.Frame23.Visible = False
 AppWindow.Frame26.Visible = False
 AppWindow.Frame27.Visible = False
 AppWindow.Frame28.Visible = False
-'AppWindow.Frame41.Visible = False
+AppWindow.Frame17.Visible = False
 
 
 AppWindow.TextBox100 = ""
@@ -383,9 +392,7 @@ End If
 
 End Sub
 
-Private Sub MultiPage7_Change()
 
-End Sub
 
 Private Sub NyomonkövetõFrissítés_Click()
 JelszóRejtés2
