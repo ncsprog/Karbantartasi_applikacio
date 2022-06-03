@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionGépállásokSzáma"
 Option Explicit
 
 Sub GépállásokSzáma()
-'JelszóRejtés2
 
 Sheets("transfer_kulcsgép").Select
 
@@ -19,6 +18,4 @@ Dim Állások As Long
 Állások = Application.WorksheetFunction.Count(Range("r1", ALkoord))
 AppWindow.TextBox97.Value = "Állások száma: " & Állások & " db"
 
-
-'JelszóRejtés
 End Sub

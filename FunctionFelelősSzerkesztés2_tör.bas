@@ -21,6 +21,4 @@ Range(hol).Select
 ' - törlés - '
 Selection.Delete Shift:=xlUp
 
-
-
 End Sub

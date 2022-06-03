@@ -2,7 +2,12 @@ Attribute VB_Name = "FunctionAdatokMásolása"
 Option Explicit
 
 Sub AdatokMásolása()
-'JelszóRejtés2
+
+Dim T1rw As Integer, T1koord As String, _
+T2rw As Integer, T2koord As String, T_tõl As Integer, M_tõl As Integer, T_ig As Integer, _
+M_ig As Integer, Dh As Integer, Dm As String, T3rw As Integer, T3koord As String, H As Integer, _
+M As Integer, H_24 As Integer, M_60 As Integer, Csek1 As Integer, Csek2 As Integer, _
+D As Integer, Mûszak As String, De As String, Du As String, Éj As String
 
 ' - Bárcaszám   "B:B" - '
 
@@ -27,7 +32,7 @@ Crw = ActiveCell.Row + 1
 Dim Coszlop As String
 Coszlop = "c"
 Dim Ckoord As String
-Ckoord = Coszlop & Crw
+Ckoord = Coszlop & Brw
 Range(Ckoord).Value = Date
 
 
@@ -41,7 +46,7 @@ Drw = ActiveCell.Row + 1
 Dim Doszlop As String
 Doszlop = "d"
 Dim Dkoord As String
-Dkoord = Doszlop & Drw
+Dkoord = Doszlop & Brw
 Range(Dkoord).Value = AppWindow.TextBox1.Value
 
 ' - RÁBAszám   "E:E" - '
@@ -54,9 +59,8 @@ Erw = ActiveCell.Row + 1
 Dim Eoszlop As String
 Eoszlop = "e"
 Dim Ekoord As String
-Ekoord = Eoszlop & Erw
+Ekoord = Eoszlop & Brw
 Range(Ekoord).Value = AppWindow.TextBox10.Value
-
  '- Gép   "F:F" - '
 
 Sheets("adatok").Select
@@ -67,10 +71,55 @@ Frw = ActiveCell.Row + 1
 Dim Foszlop As String
 Foszlop = "f"
 Dim Fkoord As String
-Fkoord = Foszlop & Frw
-Range(Fkoord).Value = "GÉP"
+Fkoord = Foszlop & Brw
 
-' - Kulcs "G:G" - '
+' - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - '
+
+Munka15.Select
+Range("a1:i3000").Clear
+
+' - másol - '
+
+Munka4.Select
+Columns("a:a").Select
+Selection.End(xlDown).Select
+Dim BKKrw As Integer
+BKKrw = ActiveCell.Row
+Dim BKKig As String
+BKKig = "d"
+Dim BKKkoord As String
+BKKkoord = BKKig & BKKrw
+Range("a1", BKKkoord).Copy
+
+' - odailleszt - '
+
+Munka15.Select
+Range("a1").PasteSpecial xlPasteValues
+' - meddig keressen - '
+Range("a1").Select
+Columns("d:d").Select
+Selection.End(xlDown).Select
+Dim BKKrw2 As Integer
+BKKrw2 = ActiveCell.Row
+Dim BKKig2 As String
+BKKig2 = "d"
+Dim BKKkoord2 As String
+BKKkoord2 = BKKig2 & BKKrw2
+
+' - szûr - '
+
+Selection.AutoFilter
+ActiveSheet.Range("a1", BKKkoord2).AutoFilter Field:=1, Criteria1:=AppWindow.TextBox10.Value
+' - visszadás - '
+
+Munka15.Select
+Columns("c:c").Select
+Selection.End(xlDown).Copy
+Munka1.Select
+Range(Fkoord).PasteSpecial xlPasteValues
+
+
+' - Kulcs "G:G" - kulcs keresés - kulcs keresés - kulcs keresés - kulcs keresés - kulcs keresés - kulcs keresés - kulcs keresés - '
 
 Sheets("adatok").Select
 Columns("g:g").Select
@@ -80,8 +129,19 @@ Grw = ActiveCell.Row + 1
 Dim Goszlop As String
 Goszlop = "g"
 Dim Gkoord As String
-Gkoord = Goszlop & Grw
-Range(Gkoord).Value = "KULCS"
+Gkoord = Goszlop & Brw
+
+Munka15.Select
+Columns("b:b").Select
+Selection.End(xlDown).Copy
+Munka1.Select
+Range(Gkoord).PasteSpecial xlPasteValues
+
+Munka15.Select
+Selection.AutoFilter
+Range("a1:i3000").Clear
+
+' - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - gépkeresése - '
 
 ' - Terület   "H:H" - '
 
@@ -93,9 +153,8 @@ Hrw = ActiveCell.Row + 1
 Dim Hoszlop As String
 Hoszlop = "h"
 Dim Hkoord As String
-Hkoord = Hoszlop & Hrw
+Hkoord = Hoszlop & Brw
 Range(Hkoord).Value = AppWindow.ComboBox1.Value
-
 ' - Csapat   "I:I" - '
 
 Sheets("adatok").Select
@@ -106,60 +165,104 @@ Irw = ActiveCell.Row + 1
 Dim Ioszlop As String
 Ioszlop = "i"
 Dim Ikoord As String
-Ikoord = Ioszlop & Irw
+Ikoord = Ioszlop & Brw
 Range(Ikoord).Value = AppWindow.ComboBox2.Value
 
-' - -tól   "J:J" - '
+' - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - '
 
-Sheets("adatok").Select
+'idõ_tól
+
+Munka1.Select
 Columns("j:j").Select
 Selection.End(xlDown).Select
-Dim Jrw As Long
-Jrw = ActiveCell.Row + 1
-Dim Joszlop As String
-Joszlop = "j"
-Dim Jkoord As String
-Jkoord = Joszlop & Jrw
-Range(Jkoord).Value = AppWindow.TextBox7.Value
+'T1rw = ActiveCell.Row + 1
+T1koord = "j" & Brw
+Range(T1koord) = AppWindow.TextBox7
 
-' - -ig "K:K" - '
+'idõ_ig
 
-Sheets("adatok").Select
+Munka1.Select
 Columns("k:k").Select
 Selection.End(xlDown).Select
-Dim Krw As Long
-Krw = ActiveCell.Row + 1
-Dim Koszlop As String
-Koszlop = "k"
-Dim Kkoord As String
-Kkoord = Koszlop & Krw
-Range(Kkoord).Value = AppWindow.TextBox6.Value
+'T2rw = ActiveCell.Row + 1
+T2koord = "k" & Brw
+Range(T2koord) = AppWindow.TextBox6
 
-' - Idõ "L:L" - '
+'Csekkolás
 
-'Sheets("adatok").Select
-'Columns("l:l").Select
-'Selection.End(xlDown).Select
-'Dim Lrw As Long
-'Lrw = ActiveCell.row + 1
-'Dim Loszlop As String
-'Loszlop = "l"
-'Dim Lkoord As String
-'Lkoord = Loszlop & Lrw
-'Range(Lkoord).Value = idõ
+Csek1 = Len(AppWindow.TextBox7)
+Csek2 = Len(AppWindow.TextBox6)
 
-' - Mûszak   "M:M" - '
+If Csek1 <> 5 Then
+MsgBox "Kezdõ idõpont formátuma nem megfelelõ! óó:pp"
+Exit Sub
+End If
+If Csek2 <> 5 Then
+MsgBox "Befejezõ idõpont formátuma nem megfelelõ! óó:pp"
+Exit Sub
+End If
 
-Sheets("adatok").Select
-Columns("m:m").Select
+
+'Tól-óra, perc
+
+T_tõl = Left(AppWindow.TextBox7, 2)
+M_tõl = Right(AppWindow.TextBox7, 2)
+
+'Ig-óra, perc
+
+T_ig = Left(AppWindow.TextBox6, 2)
+M_ig = Right(AppWindow.TextBox6, 2)
+
+'Delta-óra, perc
+
+'D = M_ig - M_tõl
+
+'Óra, perc
+
+H = 24
+M = 60
+
+'DeltaT
+
+Munka1.Select
+Columns("l:l").Select
 Selection.End(xlDown).Select
-Dim Mrw As Long
-Mrw = ActiveCell.Row + 1
-Dim Moszlop As String
-Moszlop = "m"
-Dim Mkoord As String
-Mkoord = Moszlop & Mrw
-Range(Mkoord).Value = "MÛSZAK"
+'T3rw = ActiveCell.Row + 1
+T3koord = "l" & Brw
+
+'Számítás_óra
+
+If T_tõl = T_ig Then
+Dh = T_ig - T_tõl
+ElseIf T_tõl > T_ig Then
+    If M_tõl = 0 Then
+    Dh = H - T_tõl + T_ig
+    Else
+    Dh = H - T_tõl + T_ig - 1
+    End If
+ElseIf T_ig > T_tõl Then
+Dh = T_ig - T_tõl
+End If
+
+'Számítás_perc
+
+If M_tõl = M_ig Then
+D = M_ig - M_tõl
+ElseIf M_tõl > M_ig Then
+D = M - M_tõl + M_ig
+ElseIf M_ig > M_tõl Then
+D = M_ig - M_tõl
+End If
+
+If D < 10 Then
+Dm = "0" & D
+Else
+Dm = D
+End If
+
+Range(T3koord) = Dh & ":" & Dm & " óra"
+
+' - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - idõértékek - '
 
 ' - Probléma "N:N" - '
 
@@ -171,7 +274,7 @@ Nrw = ActiveCell.Row + 1
 Dim Noszlop As String
 Noszlop = "n"
 Dim Nkoord As String
-Nkoord = Noszlop & Nrw
+Nkoord = Noszlop & Brw
 Range(Nkoord).Value = AppWindow.TextBox5.Value
 
 ' - Megoldás   "O:O" - '
@@ -184,7 +287,7 @@ Orw = ActiveCell.Row + 1
 Dim Ooszlop As String
 Ooszlop = "o"
 Dim Okoord As String
-Okoord = Ooszlop & Orw
+Okoord = Ooszlop & Brw
 Range(Okoord).Value = AppWindow.TextBox4.Value
 
 ' - Státusz   "P:P" - '
@@ -197,9 +300,8 @@ Prw = ActiveCell.Row + 1
 Dim Poszlop As String
 Poszlop = "p"
 Dim Pkoord As String
-Pkoord = Poszlop & Prw
+Pkoord = Poszlop & Brw
 Range(Pkoord).Value = AppWindow.ComboBox4.Value
-
 ' - Mérés   "Q:Q" - '
 
 Sheets("adatok").Select
@@ -210,60 +312,8 @@ Qrw = ActiveCell.Row + 1
 Dim Qoszlop As String
 Qoszlop = "q"
 Dim Qkoord As String
-Qkoord = Qoszlop & Qrw
+Qkoord = Qoszlop & Brw
 Range(Qkoord).Value = AppWindow.ComboBox3.Value
-
-' - Felelõs   "R:R" - '
-
-Sheets("adatok").Select
-Columns("r:r").Select
-Selection.End(xlDown).Select
-Dim Rrw As Long
-Rrw = ActiveCell.Row + 1
-Dim Roszlop As String
-Roszlop = "r"
-Dim Rkoord As String
-Rkoord = Roszlop & Rrw
-Range(Rkoord).Value = "vatta"
-
-'- Becsültdátum   "S:S" - '
-
-Sheets("adatok").Select
-Columns("s:s").Select
-Selection.End(xlDown).Select
-Dim Srw As Long
-Srw = ActiveCell.Row + 1
-Dim Soszlop As String
-Soszlop = "s"
-Dim Skoord As String
-Skoord = Soszlop & Srw
-Range(Skoord).Value = "vatta"
-
-' - Visszaigazoltdátum   "T:T" - '
-
-Sheets("adatok").Select
-Columns("t:t").Select
-Selection.End(xlDown).Select
-Dim Trw As Long
-Trw = ActiveCell.Row + 1
-Dim Toszlop As String
-Toszlop = "t"
-Dim Tkoord As String
-Tkoord = Toszlop & Trw
-Range(Tkoord).Value = "vatta"
-
-' - Visszaadásidátum   "U:U" - '
-
-Sheets("adatok").Select
-Columns("u:u").Select
-Selection.End(xlDown).Select
-Dim Urw As Long
-Urw = ActiveCell.Row + 1
-Dim Uoszlop As String
-Uoszlop = "u"
-Dim Ukoord As String
-Ukoord = Uoszlop & Urw
-Range(Ukoord).Value = "vatta"
 
 ' - Megjegyzés   "V:V" - '
 
@@ -275,12 +325,8 @@ Vrw = ActiveCell.Row + 1
 Dim Voszlop As String
 Voszlop = "v"
 Dim Vkoord As String
-Vkoord = Voszlop & Vrw
-If AppWindow.TextBox78 = "" Then
-Range(Vkoord).Value = " n/a "
-Else
+Vkoord = Voszlop & Brw
 Range(Vkoord).Value = AppWindow.TextBox78.Value
-End If
 
 ' - Megjegyzés   "X:X" - '
 
@@ -292,12 +338,11 @@ Xrw = ActiveCell.Row + 1
 Dim Xoszlop As String
 Xoszlop = "x"
 Dim Xkoord As String
-Xkoord = Xoszlop & Xrw
+Xkoord = Xoszlop & Brw
 Range(Xkoord).Value = AppWindow.ComboBox8.Value
     
     
 Sheets("Start").Select
 Range("b2").Select
 
-'JelszóRejtés
 End Sub

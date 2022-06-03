@@ -3,7 +3,6 @@ Option Explicit
 
 Sub BárcaKeres_Keres()
 
-'Filter a tb106 értékét a név oszlopba, az eredményt a lb35-be löki vissza által
 Munka15.Select
 Range("a1:i1000").Clear
 
@@ -58,8 +57,6 @@ Dim BKKkoord3 As String
 BKKkoord3 = BKKig3 & BKKrw3
 Range("a1", BKKkoord).Select
 Selection.Copy
-'Application.CutCopyMode = False
-'Range("a1:xx10000") = ""
 Range("f1").PasteSpecial xlPasteValues
 
 Selection.AutoFilter
@@ -81,6 +78,5 @@ AppWindow.ListBox35.List = rngList.Value
 AppWindow.TextBox106 = ""
 Munka15.Select
 Range("a1:i1000").Clear
-
 
 End Sub

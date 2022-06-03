@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionIdõszámítás"
 Option Explicit
 
 Sub Idõszámítás()
-'JelszóRejtés2
 
 ' - -tól koordináta - '
 Sheets("adatok").Select
@@ -50,11 +49,9 @@ Else
 Range(Lkoord) = ig - tól
 End If
 
-'ha tól > ig, akkor a tólból vonjon ki x1-et adja hozzá az ig-et és x2-t
 
 
 Sheets("Start").Select
 Range("b2").Select
 
-'JelszóRejtés
 End Sub

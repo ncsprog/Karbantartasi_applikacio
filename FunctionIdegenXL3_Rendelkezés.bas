@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionIdegenXL3_Rendelkezés"
 Option Explicit
 
 Sub IdegenXL3()
-'JelszóRejtés2
 ' - Rendelkezés - '
 
 
@@ -13,7 +12,6 @@ Sub IdegenXL3()
     'megynyitja másik file-t
     Workbooks.Open "\\rabart\frs$\sajat$\09049\Ncsp\programok\Forrásadatok\Rendelkezésre állás és összállásidõ idõszakra.xlsx"
     Windows("Rendelkezésre állás és összállásidõ idõszakra.xlsx").Activate
-    'abban mókol:   kijelöli a kívánt adatokat
     'mettõl
     Sheets("FNDWRR").Select
     Dim tólXL As Range
@@ -29,7 +27,6 @@ Sub IdegenXL3()
    
    Range(tólXL, igXL).Select
     
-   'mókol átt:  a kijelöltet átmásolja az emez füzetbe
     Selection.Copy
     Windows("Karbantartási applikáció.xlsm").Activate
     Munka14.Range("a1").PasteSpecial xlPasteValues
@@ -37,7 +34,4 @@ Sub IdegenXL3()
     ActiveWindow.Close
     Range("A1").Select
 
-'Állásidõ
-
-'JelszóRejtés
 End Sub

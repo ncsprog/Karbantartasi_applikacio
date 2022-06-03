@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionLétszámTörlés_inaktív"
 Option Explicit
 
 Sub LétszámTörlés()
-'JelszóRejtés2
 
 Sheets("Létszám").Select
 Columns("b:b").Select
@@ -49,5 +48,4 @@ End If
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
 End Sub

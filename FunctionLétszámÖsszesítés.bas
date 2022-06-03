@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionLétszámÖsszesítés"
 Option Explicit
 
 Sub LétszámÖsszesítés()
-'JelszóRejtés2
 
 Sheets("létszám").Select
 Columns("c:c").Select
@@ -37,5 +36,4 @@ Range(szumRng).Value = létsz
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
 End Sub

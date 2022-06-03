@@ -1,7 +1,5 @@
 Attribute VB_Name = "FunctionAdatokMásolása2"
 Sub AdatokMásolása2()
-'JelszóRejtés2
-
 ' - Bárcaszám   "B:B" - '
 
 Sheets("adatok").Select
@@ -119,43 +117,7 @@ Dim Mkoord As String
 Mkoord = Moszlop & Mrw
 Range(Mkoord).Value = AppWindow.TextBox69.Value
 
-' - -tól   "J:J" - '
-
-Sheets("adatok").Select
-Columns("j:j").Select
-Selection.End(xlDown).Select
-Dim Jrw As Long
-Jrw = ActiveCell.Row + 1
-Dim Joszlop As String
-Joszlop = "j"
-Dim Jkoord As String
-Jkoord = Joszlop & Jrw
-Range(Jkoord).Value = AppWindow.TextBox74.Value
-
-' - -ig "K:K" - '
-
-Sheets("adatok").Select
-Columns("k:k").Select
-Selection.End(xlDown).Select
-Dim Krw As Long
-Krw = ActiveCell.Row + 1
-Dim Koszlop As String
-Koszlop = "k"
-Dim Kkoord As String
-Kkoord = Koszlop & Krw
-Range(Kkoord).Value = AppWindow.TextBox49.Value
-
-' - Idõ "L:L" - '
-
-'Sheets("adatok").Select
-'Columns("l:l").Select
-'Dim Lrw As Long
-'Lrw = ActiveCell.row + 1
-'Dim Loszlop As String
-'Loszlop = "l"
-'Dim Lkoord As String
-'Lkoord = Loszlop & Lrw
-'Range(Lkoord).Value = AppWindow.TextBox71.Value
+IdõKalkulátor2
 
 ' - Probléma "N:N" - '
 
@@ -281,6 +243,5 @@ End If
 Sheets("Start").Select
 Range("b2").Select
 
-'JelszóRejtés
 End Sub
 

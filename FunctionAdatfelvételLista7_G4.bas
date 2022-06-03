@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionAdatfelvételLista7_G4"
 Option Explicit
 
 Sub AdatfelvételLista7()
-'JelszóRejtés2
 ' - Teljes Költség - '
 
 Sheets("transfer_gazdasági").Select
@@ -42,5 +41,4 @@ AppWindow.ListBox26.List = rngList.Value
 Sheets("Start").Select
 Range("b2").Select
 
-'JelszóRejtés
 End Sub

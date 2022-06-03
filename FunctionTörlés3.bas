@@ -1,7 +1,7 @@
-Attribute VB_Name = "FunctionTörlés2"
+Attribute VB_Name = "FunctionTörlés3"
 Option Explicit
 
-Sub Törlés2()
+Sub Törlés3()
 
 AppWindow.TextBox54 = ""
 AppWindow.TextBox62 = ""
@@ -24,9 +24,8 @@ AppWindow.TextBox60 = ""
 AppWindow.TextBox61 = ""
 AppWindow.ComboBox7 = ""
 AppWindow.TextBox79 = ""
+AppWindow.ListBox20.Clear
 
-
-Sheets("Start").Select
-Range("b2").Select
 End Sub
+
 

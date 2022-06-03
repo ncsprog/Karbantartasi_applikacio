@@ -2,11 +2,11 @@ Attribute VB_Name = "FunctionAdatfelvételLista13"
 Option Explicit
 
 Sub AdatfelvételLista13()
-' - Applikációból származó adatok - '
 
 ' - kiürítit a transfert - '
 Sheets("szûrõ_transfer").Select
 Range("a1:xx10000") = ""
+
 ' - átmásolja a kezelendõ adatokat - '
 Sheets("adatok").Select
 Columns("w:w").Select

@@ -2,9 +2,6 @@ Attribute VB_Name = "FunctionPénz"
 Option Explicit
 
 Sub Pénz()
-'JelszóRejtés2
-
-'kimutatást csesz a kimutatásra pénzügyileg :D
 
 Munka10.Range("a1").AutoFilter 14, 10, xlTop10Items
 'anyag ktsg összegmásolás
@@ -15,11 +12,7 @@ igA_ktsg = ActiveCell.Row
 Dim koordA_ktsg As String
 koordA_ktsg = "n" & igA_ktsg
 
-
 'illesssze be a kombobokszba a találati értékeket
-
-
-
 
 Range("n2", koordA_ktsg).Copy
 Munka9.Range("e11").PasteSpecial xlPasteValues
@@ -82,6 +75,4 @@ Range("l2", koordK_név).Copy
 Munka9.Range("j11").PasteSpecial xlPasteValues
 
 ActiveSheet.AutoFilterMode = False              'törli a szûrõt
-'Munka9.Range("d10").Select
-'JelszóRejtés
 End Sub

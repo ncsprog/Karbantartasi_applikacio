@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionIDgenerálás3"
 Option Explicit
 
 Sub IDgenerálás3()
-'JelszóRejtés2
 
 Sheets("Megbeszélés").Select
 Columns("a:a").Select
@@ -20,5 +19,4 @@ Range(IDkoord) = IDnr
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
 End Sub

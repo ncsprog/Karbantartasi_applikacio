@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionID_generálás2"
 Option Explicit
 
 Sub ID_generálás2()
-'JelszóRejtés2
 
 Dim most As Date
 most = Now()
@@ -23,5 +22,5 @@ Range(ID_koord) = most
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
+
 End Sub

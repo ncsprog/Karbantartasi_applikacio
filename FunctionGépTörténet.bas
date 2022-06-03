@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionGépTörténet"
 Option Explicit
 
 Sub GépTörténet()
-'JelszóRejtés2
 
 Sheets("szûrõ_transfer").Select
 Columns("a:u").Select
@@ -54,5 +53,5 @@ Range("a1").Select
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
+
 End Sub

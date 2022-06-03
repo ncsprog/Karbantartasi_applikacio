@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionAdatfelvételLista9_R1"
 Option Explicit
 
 Sub AdatfelvételLista9_R1()
-'JelszóRejtés2
 ' - Rendelkezés - '
 Sheets("transfer_rendelkezés").Select
 
@@ -29,16 +28,10 @@ Range("a1", ALkoord).Select
         .Apply
     End With
     
-'Dim Állásidõ As Long
-'Állásidõ = Application.WorksheetFunction.Sum(Range("r2", ALkoord))
-'AppWindow.TextBox96.Value = "Állásidõ: " & Állásidõ & " Ft"
-
-
 Dim rngList As Range
 Set rngList = Munka14.Range("a1", ALkoord)
 AppWindow.ListBox31.List = rngList.Value
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
 End Sub

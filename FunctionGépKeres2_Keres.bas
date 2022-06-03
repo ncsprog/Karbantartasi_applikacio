@@ -4,7 +4,6 @@ Option Explicit
 Sub GépKeres2()
 ' - Keres - '
 
-'Filter a tb107 értékét a név oszlopba, az eredményt a lb36-be löki vissza által
 Munka15.Select
 Range("a1:i3000").Clear
 
@@ -60,8 +59,6 @@ Dim BKKkoord3 As String
 BKKkoord3 = BKKig3 & BKKrw3
 Range("a1", BKKkoord).Select
 Selection.Copy
-'Application.CutCopyMode = False
-'Range("a1:xx10000") = ""
 Range("f1").PasteSpecial xlPasteValues
 
 Selection.AutoFilter

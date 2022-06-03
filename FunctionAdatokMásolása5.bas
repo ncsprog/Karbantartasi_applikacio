@@ -15,7 +15,6 @@ Dim Bkoord As String
 Bkoord = Boszlop & Brw
 Range(Bkoord).Value = Date
 
-
 ' - Mérnök - Team 1 "C:C" - '
 
 Sheets("létszám").Select
@@ -28,7 +27,6 @@ Coszlop = "c"
 Dim Ckoord As String
 Ckoord = Coszlop & Crw
 Range(Ckoord).Value = AppWindow.TextBox113.Value
-
 
 ' - Lakatos - Team 1 "D:D" - '
 

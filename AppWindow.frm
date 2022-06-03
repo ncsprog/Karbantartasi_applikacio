@@ -16,60 +16,41 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 Private Sub AdatfelvételMentés_Click()
+
+Dim TólCsek As Integer, IgCsek As Integer
+TólCsek = Len(AppWindow.TextBox6)
+IgCsek = Len(AppWindow.TextBox7)
+If TólCsek < 5 Then
+AppWindow.TextBox6.Value = "0" & AppWindow.TextBox6.Value
+End If
+If IgCsek < 5 Then
+AppWindow.TextBox7.Value = "0" & AppWindow.TextBox7.Value
+End If
 JelszóRejtés2
 If AppWindow.TextBox11 = "" Then
 MsgBox "Bárcaszám megadása kötelezõ!"
 AdatfelvételLista
 Exit Sub
 End If
-
-'If AppWindow.ComboBox8 = "" Then
-If AppWindow.TextBox11 <> "" Then
-ElseIf AppWindow.TextBox10 = "" Then
-MsgBox "Kategóriát választani kötelezõ!" & vbCrLf & "vagy" & vbCrLf & "Rábaszám hiányzik" & vbCrLf & vbCrLf & "Nem történt adatmentés."
-Exit Sub
-ElseIf AppWindow.ComboBox8 = "" Then
-MsgBox "Kategóriát választani kötelezõ!" & vbCrLf & "vagy" & vbCrLf & "Rábaszám hiányzik" & vbCrLf & vbCrLf & "Nem történt adatmentés."
-AdatfelvételLista
-JelszóRejtés
-Exit Sub
-End If
-
-'If AppWindow.TextBox11 <> "" Then
-'TartalomEllenõrzés
 AdatokMásolása
 IDgenerálás
 ID_generálás
-IdõKalkulátor
 AdatokMentése
 AdatfelvételLista
 Törlés
-'Idõszámítás
-'End If
-
 BoxInaktíváló
-
 JelszóRejtés
 End Sub
-
-
 Private Sub CommandButton1_Click()
 JelszóRejtés2
 If AppWindow.TextBox73 = "" Then
 MsgBox "kérek egy gépszámot"
-'AdatfelvételLista3
 End If
 If AppWindow.TextBox73 <> "" Then
 GépTörténet
 End If
-
 JelszóRejtés
 End Sub
-
-
-
-
-
 Private Sub CommandButton10_Click()
 JelszóRejtés2
 If AppWindow.TextBox101 = "" Then
@@ -80,10 +61,8 @@ Rendezés
 AdatfelvételLista10
 CbFeltöltés
 End If
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton12_Click()
 JelszóRejtés2
 If ListBox29.ListCount = 0 Or ListBox29.ListCount < 0 Or ListBox29.ListCount > 21 Then
@@ -95,13 +74,9 @@ Rendezés
 CbFeltöltés
 End If
 AdatfelvételLista10
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton13_Click()
-
-
 JelszóRejtés2
 If ListBox30.ListCount = 0 Then
 MsgBox "Nincs kiválasztott sor."
@@ -111,10 +86,8 @@ AdatfelvételLista11
 Rendezés2
 CbFeltöltés
 End If
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton14_Click()
 JelszóRejtés2
 If AppWindow.TextBox102 = "" Then
@@ -127,9 +100,7 @@ CbFeltöltés
 End If
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton15_Click()
-
 If AppWindow.TextBox105 = "" Then
 MsgBox "Kérlek add meg az aktuális összlétszámot."
 JelszóRejtés2
@@ -145,7 +116,6 @@ AdatfelvételLista12
 End If
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton16_Click()
 JelszóRejtés2
 If AppWindow.TextBox106 = "" Then
@@ -155,23 +125,15 @@ BárcaKeres_Keres
 End If
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton17_Click()
-
 JelszóRejtés2
 If AppWindow.TextBox107 = "" Then
 GépKeres
 Else
 GépKeres2
-'BárcaKeres_Keres
 End If
 JelszóRejtés
-
-
-
-
 End Sub
-
 Private Sub CommandButton18_Click()
 JelszóRejtés2
 If AppWindow.TextBox108 = "" Then
@@ -182,10 +144,8 @@ Rendezés3
 AdatfelvételLista14
 CbFeltöltés
 End If
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton19_Click()
 JelszóRejtés2
 If ListBox37.ListCount = 0 Or ListBox37.ListCount < 0 Or ListBox37.ListCount > 21 Then
@@ -197,17 +157,13 @@ Rendezés3
 CbFeltöltés
 End If
 AdatfelvételLista14
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton2_Click()
 JelszóRejtés2
 GépállásokSzáma
-'tb75
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton20_Click()
 JelszóRejtés2
 If AppWindow.TextBox109 = "" Then
@@ -218,10 +174,8 @@ Rendezés5
 AdatfelvételLista15
 CbFeltöltés
 End If
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton21_Click()
 JelszóRejtés2
 If ListBox38.ListCount = 0 Or ListBox38.ListCount < 0 Or ListBox38.ListCount > 21 Then
@@ -233,10 +187,8 @@ Rendezés
 CbFeltöltés
 End If
 AdatfelvételLista15
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton22_Click()
 JelszóRejtés2
 If AppWindow.TextBox110 = "" Then
@@ -247,10 +199,8 @@ Rendezés4
 AdatfelvételLista16
 CbFeltöltés
 End If
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton23_Click()
 JelszóRejtés2
 If ListBox39.ListCount = 0 Or ListBox39.ListCount < 0 Or ListBox39.ListCount > 21 Then
@@ -262,37 +212,37 @@ Rendezés4
 CbFeltöltés
 End If
 AdatfelvételLista16
-
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton24_Click()
 JelszóRejtés2
 CbRögzít
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton25_Click()
 JelszóRejtés2
 CbFeltöltés
 CbVisszaadás
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton26_Click()
 JelszóRejtés2
 MegbeszélésDátumok
 MegbeszélésMásoló
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton27_Click()
 JelszóRejtés2
 MunkaSzerkesztés2
 BoxAktíváló
 JelszóRejtés
 End Sub
-
+Private Sub CommandButton28_Click()
+Törlés
+End Sub
+Private Sub CommandButton29_Click()
+Törlés3
+End Sub
 Private Sub CommandButton3_Click()
 JelszóRejtés2
 IdegenXL2
@@ -300,11 +250,20 @@ IdegenXL3
 AdatfelvételLista8_Á1
 AdatfelvételLista9_R1
 AdatfelvételLista13
-'AppWindow.TextBox76 = "Másolás kész"
-'tb76
 JelszóRejtés
 End Sub
-
+Private Sub CommandButton30_Click()
+JelszóRejtés2
+Jelszókezelés
+JelszóRejtés
+End Sub
+Private Sub CommandButton31_Click()
+JelszóRejtés2
+Munka12.Range("aa2").Value = AppWindow.TextBox140.Value
+TbBetöltés
+AppWindow.TextBox140.Value = ""
+JelszóRejtés
+End Sub
 Private Sub CommandButton4_Click()
 JelszóRejtés2
 IdegenXL
@@ -312,13 +271,8 @@ AdatfelvételLista4
 AdatfelfételLista5
 AdatfelvételLista6
 AdatfelvételLista7
-'AppWindow.TextBox77.Value = "Másolás kész"
-
-'tb77
 JelszóRejtés
 End Sub
-
-
 Private Sub CommandButton5_Click()
 JelszóRejtés2
 IDgenerálás2
@@ -330,7 +284,6 @@ AdatokMásolása5
 LétszámÖsszesítés
 JelszóRejtés
 End Sub
-
 Private Sub CommandButton6_Click()
 JelszóRejtés2
 If AppWindow.ComboBox5 = "" Then
@@ -341,14 +294,10 @@ AdatfelvételLista2
 End If
 JelszóRejtés
 End Sub
-
-
 Private Sub CommandButton8_Click()
 JelszóRejtés3
 End Sub
-
 Private Sub CommandButton9_Click()
-
 If AppWindow.TextBox100 = "smj266" Then
 JelszóRejtés2
 TbBetöltés
@@ -362,13 +311,13 @@ AppWindow.Frame26.Visible = True
 AppWindow.Frame27.Visible = True
 AppWindow.Frame28.Visible = True
 AppWindow.Frame17.Visible = True
+AppWindow.Frame43.Visible = True
+AppWindow.Frame44.Visible = True
 AdatfelvételLista10
 AdatfelvételLista11
 AdatfelvételLista14
 AdatfelvételLista15
 AdatfelvételLista16
-'CbFeltöltés
-'CbVisszaadás
 JelszóRejtés
 AppWindow.TextBox100 = ""
 Else
@@ -383,32 +332,24 @@ AppWindow.Frame26.Visible = False
 AppWindow.Frame27.Visible = False
 AppWindow.Frame28.Visible = False
 AppWindow.Frame17.Visible = False
-
-
+AppWindow.Frame43.Visible = False
+AppWindow.Frame44.Visible = False
 AppWindow.TextBox100 = ""
-
-
 End If
-
 End Sub
-
-
-
 Private Sub NyomonkövetõFrissítés_Click()
 JelszóRejtés2
 If AppWindow.TextBox62 <> "" Then
-
-'TartalomEllenõrzés2
 IDgenerálás
 ID_generálás
 AdatokMásolása2
+MûszakHatározó
 AdatokMentése
 Törlés2
 AdatfelvételLista2
 End If
 JelszóRejtés
 End Sub
-
 Private Sub NyomonkövetõSzerkesztés_Click()
 JelszóRejtés2
 If ListBox20.ListCount = 0 Then
@@ -419,27 +360,13 @@ MunkaSzerkesztés
 End If
 JelszóRejtés
 End Sub
-
-
-
-
-Private Sub TextBox103_Change()
-
-End Sub
-
 Private Sub TextBox112_Change()
-
 AppWindow.TextBox112 = TextBox115 + TextBox114 + TextBox113
-
 End Sub
-
-
 Private Sub UserForm_Initialize()
 JelszóRejtés2
     ' - AdatfelvételTerület - '
-
-    ' - AdatfelvételCsapat - '
-
+    ' - AdadfelvételCsapat - '
     ' - AdatfelvételMérés - '
     ComboBox3.AddItem "Igen"
     ComboBox3.AddItem "Nem"
@@ -464,9 +391,7 @@ JelszóRejtés2
     ComboBox4.AddItem Munka12.Range("b19").Value
     ComboBox4.AddItem Munka12.Range("b20").Value
     ComboBox4.AddItem Munka12.Range("b21").Value
-    
-  
-    ' - NyomonkövetõStátusz - '
+        ' - NyomonkövetõStátusz - '
     ComboBox5.AddItem Munka12.Range("b2").Value
     ComboBox5.AddItem Munka12.Range("b3").Value
     ComboBox5.AddItem Munka12.Range("b4").Value
@@ -487,9 +412,7 @@ JelszóRejtés2
     ComboBox5.AddItem Munka12.Range("b19").Value
     ComboBox5.AddItem Munka12.Range("b20").Value
     ComboBox5.AddItem Munka12.Range("b21").Value
-    
-
-    ' - NyomonkövetõMérés - '
+        ' - NyomonkövetõMérés - '
     ComboBox6.AddItem "Igen"
     ComboBox6.AddItem "Nem"
     ' - NyomonkövetõFelelõs - '
@@ -523,10 +446,8 @@ JelszóRejtés2
     ComboBox7.AddItem Munka12.Range("d29").Value
     ComboBox7.AddItem Munka12.Range("d30").Value
     ComboBox7.AddItem Munka12.Range("d31").Value
-    
-    ' - Kategória - '
-    
- ComboBox8.AddItem Munka12.Range("j2").Value
+       ' - Kategória - '
+     ComboBox8.AddItem Munka12.Range("j2").Value
     ComboBox8.AddItem Munka12.Range("j3").Value
     ComboBox8.AddItem Munka12.Range("j4").Value
     ComboBox8.AddItem Munka12.Range("j5").Value
@@ -546,10 +467,8 @@ JelszóRejtés2
     ComboBox8.AddItem Munka12.Range("j19").Value
     ComboBox8.AddItem Munka12.Range("j20").Value
     ComboBox8.AddItem Munka12.Range("j21").Value
-   
-     ' - Terület - '
-    
- ComboBox1.AddItem Munka12.Range("p2").Value
+        ' - Terület - '
+     ComboBox1.AddItem Munka12.Range("p2").Value
     ComboBox1.AddItem Munka12.Range("p3").Value
     ComboBox1.AddItem Munka12.Range("p4").Value
     ComboBox1.AddItem Munka12.Range("p5").Value
@@ -569,10 +488,8 @@ JelszóRejtés2
     ComboBox1.AddItem Munka12.Range("p19").Value
     ComboBox1.AddItem Munka12.Range("p20").Value
     ComboBox1.AddItem Munka12.Range("p21").Value
-    
-      ' - Csapat - '
-    
- ComboBox2.AddItem Munka12.Range("m2").Value
+          ' - Csapat - '
+     ComboBox2.AddItem Munka12.Range("m2").Value
     ComboBox2.AddItem Munka12.Range("m3").Value
     ComboBox2.AddItem Munka12.Range("m4").Value
     ComboBox2.AddItem Munka12.Range("m5").Value
@@ -592,6 +509,5 @@ JelszóRejtés2
     ComboBox2.AddItem Munka12.Range("m19").Value
     ComboBox2.AddItem Munka12.Range("m20").Value
     ComboBox2.AddItem Munka12.Range("m21").Value
-    
-  JelszóRejtés
+      JelszóRejtés
 End Sub

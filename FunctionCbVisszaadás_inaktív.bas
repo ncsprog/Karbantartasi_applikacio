@@ -22,10 +22,10 @@ Range("a1").PasteSpecial xlPasteValues
 
 Columns("x:x").Select
 Selection.End(xlDown).Select
-Dim d As Long
-d = ActiveCell.Row
+Dim D As Long
+D = ActiveCell.Row
 Dim Dkoord As String
-Dkoord = "x" & d
+Dkoord = "x" & D
 
 Range("a1").Select
     Selection.AutoFilter
@@ -159,8 +159,6 @@ Range("a1").Select
     ActiveSheet.Range("a1", Dkoord).AutoFilter Field:=8, Criteria1:=Munka12.Range("p2").Value
     MegbeszélésMásoló
   
-
-
 Range("a1").Select
 Selection.AutoFilter
 

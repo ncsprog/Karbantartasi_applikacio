@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionJelszóRejtés2_oldás"
 Option Explicit
 
 Sub JelszóRejtés2()
-'JelszóRejtés2
 ' - rejtés - '
 
 Munka1.Visible = xlSheetVisible
@@ -41,5 +40,4 @@ Munka15.Unprotect "asaguard"
 Munka16.Unprotect "asaguard"
 
 
-'JelszóRejtés
 End Sub

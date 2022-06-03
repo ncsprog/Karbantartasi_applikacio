@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionAdatfelvételLista5_G2"
 Option Explicit
 
 Sub AdatfelfételLista5()
-'JelszóRejtés2
 ' - Bérköltség - '
 
 Sheets("transfer_gazdasági").Select
@@ -42,5 +41,4 @@ AppWindow.ListBox24.List = rngList.Value
 Sheets("Start").Select
 Range("b2").Select
 
-'JelszóRejtés
 End Sub

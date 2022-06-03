@@ -2,8 +2,6 @@ Attribute VB_Name = "FunctionGépKeres_Frissít"
 Option Explicit
 
 Sub GépKeres()
-' - Frissítés - '
-
 ' - Lista koordináta - '
 
 Sheets("gépek").Select

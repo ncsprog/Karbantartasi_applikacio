@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionBárcaKeres_Frissít"
 Option Explicit
 
 Sub BárcaKeres_Frissít()
-'JelszóRejtés2
 ' - Lista koordináta - '
 
 Sheets("névsor").Select
@@ -24,6 +23,4 @@ AppWindow.ListBox35.List = rngList.Value
 Sheets("Start").Select
 Range("b2").Select
 
-'Worksheets("névsor").Visible = False
-'JelszóRejtés
 End Sub

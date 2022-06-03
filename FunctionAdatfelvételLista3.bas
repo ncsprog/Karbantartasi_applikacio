@@ -2,7 +2,6 @@ Attribute VB_Name = "FunctionAdatfelvételLista3"
 Option Explicit
 
 Sub AdatfelvételLista3()
-'JelszóRejtés2
 ' - Lista koordináta - '
 
 Sheets("adatok").Select
@@ -23,5 +22,4 @@ AppWindow.ListBox22.List = rngList.Value
 
 Sheets("Start").Select
 Range("b2").Select
-'JelszóRejtés
 End Sub

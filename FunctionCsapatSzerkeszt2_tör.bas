@@ -3,7 +3,6 @@ Option Explicit
 
 Sub CsapatSzerkeszt2()
 
-
 Munka12.Select
 Columns("m:m").Select
 Selection.End(xlDown).Select
